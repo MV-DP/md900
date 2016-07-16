@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>vsi.ac</path>
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+		<interpolation>
+			<entry>
+				<ind>  -2000.0</ind>
+				<dep>-173.5</dep>
+			</entry>
+			<entry>
+				<ind>  -1500.0</ind>
+				<dep>-131.5</dep>
+			</entry>
+			<entry>
+				<ind>  -1000.0</ind>
+				<dep> -81.5</dep>
+			</entry>
+			<entry>
+				<ind>   -500.0</ind>
+				<dep> -35.3</dep>
+			</entry>
+			<entry>
+				<ind>      0.0</ind>
+				<dep>   0.0</dep>
+			</entry>
+			<entry>
+				<ind>    500.0</ind>
+				<dep>  35.7</dep>
+			</entry>
+			<entry>
+				<ind>   1000.0</ind>
+				<dep>  81.5</dep>
+			</entry>
+			<entry>
+				<ind>   1500.0</ind>
+				<dep> 131.0</dep>
+			</entry>
+			<entry>
+				<ind>   2000.0</ind>
+				<dep> 172.9</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>  <animation>
+        <type>material</type>
+        <object-name>face</object-name>
+     
+ <object-name>needle</object-name>      <emission>
+            <red>0.04</red>
+            <green>0.05</green>
+            <blue>0.04</blue>
+            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
+</PropertyList>
+
+
