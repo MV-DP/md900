@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>ai.ac</path>
+
+  <animation>
+    <object-name>AI.fond</object-name>
+    <object-name>AI.face</object-name>
+    <object-name>AI.background</object-name>
+    <object-name>AI.scale</object-name>
+    <object-name>AI.float</object-name>
+    <object-name>AI.aircraft</object-name>
+
+    <object-name>AI.vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>AI.vitre</object-name>
+  </animation>
+
+  
+
+  <animation>
+    <type>material</type>
+    <object-name>AI.background</object-name>
+    <object-name>AI.scale</object-name>
+    <object-name>AI.float</object-name>
+    <object-name>AI.aircraft</object-name>
+    <condition>
+      <property>systems/electrical/outputs/instrument-lights</property>
+    </condition>
+    <emission>
+      <red>   0.4 </red>
+      <green> 0.5 </green>
+      <blue>  0.4 </blue>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AI.background</object-name>
+    <object-name>AI.scale</object-name>
+    <object-name>AI.float</object-name>
+    <property>orientation/roll-deg</property>
+    <factor>1.0</factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>AI.float</object-name>
+    <property>orientation/pitch-deg</property>
+    <factor>-0.0002 </factor>
+    <min-m> -0.1000 </min-m>
+    <max-m>  0.1000 </max-m>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
