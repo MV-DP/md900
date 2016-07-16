@@ -1,0 +1,49 @@
+<!--emergency float -->
+<PropertyList>
+
+<path>right_float.ac</path>
+
+ <animation>
+  <type>scale</type>
+  <object-name>right_float_L</object-name>
+ <property>sim/multiplay/generic/float[0]</property>
+  <x-min>1.0</x-min>
+  <y-min>1.0</y-min>
+  <z-min>1.0</z-min>
+  <x-factor>2</x-factor>
+  <y-factor>10</y-factor>
+  <z-factor>10</z-factor>
+ </animation>
+
+ <animation>
+  <type>scale</type>
+
+ <object-name>right_float_R</object-name> <property>sim/multiplay/generic/float[0]</property>
+  <x-min>1.0</x-min>
+  <y-min>1.0</y-min>
+  <z-min>1.0</z-min>
+  <x-factor>2</x-factor>
+  <y-factor>10</y-factor>
+  <z-factor>10</z-factor>
+ </animation> <animation>
+   <type>select</type>
+   <object-name>right_float_L</object-name>
+ <object-name>right_float_R</object-name> <condition>
+     <property>sim/model/md900/emergencyfloats</property>
+   </condition>
+ </animation>
+
+ <animation>
+    <type>pick</type>
+    <object-name>right_float_L</object-name>
+ <object-name>right_float_R</object-name> <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>md900.toggle_floats();</script>
+      </binding>
+    </action>
+ </animation>
+
+</PropertyList>
