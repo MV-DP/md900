@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ This file is part of FlightGear, the free flight simulator
+ http://www.flightgear.org/
+
+ Copyright (C) 2009 Heiko Schulz, Heiko.H.Schulz@gmx.net
+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+-->
+<PropertyList>
+
+  <path>general_pilot.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <!-- opaque objects -->
+    <object-name>head</object-name>
+    <object-name>shield</object-name>
+    <object-name>corps</object-name>
+    <object-name>arml</object-name>
+    <object-name>armr</object-name>
+    <object-name>forearml</object-name>
+    <object-name>forearmr</object-name>
+    <object-name>handr</object-name>
+    <object-name>thighl</object-name>
+    <object-name>thighr</object-name>
+    <object-name>legl</object-name>
+    <object-name>legr</object-name>
+    <object-name>footl</object-name>
+    <object-name>footr</object-name>
+
+    <!-- Objets transparents -->
+    <!-- transparent objects -->
+  </animation>
+
+  <!-- head -->
+  <animation>
+    <name>head_animation</name>
+    <object-name>head</object-name>
+    <object-name>shield</object-name>
+  </animation>
+
+  <!-- Visière invisible depuis le cockpit -->
+  <!-- head, shield invisible from the cockpit -->
+  <animation>
+    <type>select</type>
+    <object-name>head</object-name>
+    <object-name>shield</object-name>
+    <condition>
+      <greater-than>
+        <property>sim/current-view/view-number</property>
+        <value>0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>head_animation</object-name>
+    <property>controls/flight/elevator</property>
+    <factor> -30 </factor>
+    <center>
+      <x-m> -3.731 </x-m>
+      <y-m> -0.672 </y-m>
+      <z-m> -0.233 </z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 1.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>head_animation</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>-45</factor>
+    <center>
+       <x-m> -3.731 </x-m>
+      <y-m> -0.672 </y-m>
+      <z-m> -0.233 </z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 0.000 </y>
+      <z> 1.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>head_animation</object-name>
+    <property>controls/flight/aileron</property>
+    <factor> 45.0</factor>
+    <center>
+      <x-m> -3.731 </x-m>
+      <y-m> -0.672 </y-m>
+      <z-m> -0.233 </z-m>
+    </center>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation> 
+  
+  <!--animation de manche-->
+  <!--animation right hand-->
+  <animation>
+    <type>rotate</type>
+    <object-name>handr</object-name>
+      <property>controls/flight/aileron</property>
+    <factor>-12</factor>
+    <center>
+      <x-m> -4.159 </x-m>
+      <y-m> -0.680 </y-m>
+      <z-m> -1.036 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0.3 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>handr</object-name>
+      <property>controls/flight/elevator</property>
+    <factor>-12</factor>
+    <center>
+      <x-m> -4.159 </x-m>
+      <y-m> -0.680 </y-m>
+      <z-m> -1.036 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>handr</object-name>
+      <property>controls/flight/elevator</property>
+    <factor>14</factor>
+    <center>
+      <x-m> -4.13 </x-m>
+      <y-m> -0.68 </y-m>
+      <z-m> -0.56 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z>-0.8 </z>
+    </axis>
+  </animation>
+
+  <!--animation right forearm-->
+  <animation>
+    <type>rotate</type>
+    <object-name>forearmr</object-name>
+      <property>controls/flight/aileron</property>
+    <factor>-12</factor>
+    <center>
+      <x-m> -4.159 </x-m>
+      <y-m> -0.680 </y-m>
+      <z-m> -1.036 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0.4 </y>
+      <z> 0.4 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>forearmr</object-name>
+       <property>controls/flight/aileron</property>
+    <factor>1</factor>
+    <interpolation>
+      <entry><ind> 1 </ind><dep> 0.020 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0     </dep></entry>
+      <entry><ind>-1 </ind><dep>-0.030 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>forearmr</object-name>
+       <property>controls/flight/aileron</property>
+    <factor>1</factor>
+    <interpolation>
+      <entry><ind> 1 </ind><dep>-0.020 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0     </dep></entry>
+      <entry><ind>-1 </ind><dep>-0.000 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>forearmr</object-name>
+       <property>controls/flight/elevator</property>
+    <factor>-12</factor>
+    <center>
+      <x-m> -4.200 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.600 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>forearmr</object-name>
+       <property>controls/flight/elevator</property>
+    <factor>-10</factor>
+    <center>
+      <x-m> -4.000 </x-m>
+      <y-m> -0.680 </y-m>
+      <z-m> -0.600 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>forearmr</object-name>
+       <property>controls/flight/elevator</property>
+    <factor>1</factor>
+    <interpolation>
+      <entry><ind>-1   </ind><dep> 0.07  </dep></entry>
+      <entry><ind> 0   </ind><dep> 0     </dep></entry>
+      <entry><ind> 0.5 </ind><dep>-0.04  </dep></entry>
+      <entry><ind> 1   </ind><dep>-0.065 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>forearmr</object-name>
+       <property>controls/flight/elevator</property>
+    <factor>1</factor>
+    <interpolation>
+      <entry><ind>-1   </ind><dep> 0.00  </dep></entry>
+      <entry><ind> 0   </ind><dep> 0     </dep></entry>
+      <entry><ind> 1   </ind><dep>-0.03 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>forearmr</object-name>
+       <property>controls/flight/elevator</property>
+    <factor>1</factor>
+    <interpolation>
+      <entry><ind> 1 </ind><dep>-0.010 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0     </dep></entry>
+      <entry><ind>-1 </ind><dep> 0.010 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <!--animation right arm-->
+  <animation>
+    <type>rotate</type>
+    <object-name>armr</object-name>
+      <property>controls/flight/elevator</property>
+    <factor>12</factor>
+    <center>
+      <x-m> -3.653 </x-m>
+      <y-m> -0.290 </y-m>
+      <z-m> -0.340 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0.4 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>armr</object-name>
+      <property>controls/flight/aileron</property>
+    <factor>14</factor>
+    <center>
+      <x-m> -3.653 </x-m>
+      <y-m> -0.530 </y-m>
+      <z-m> -0.340 </z-m>
+    </center>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z> -3 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>armr</object-name>
+       <property>controls/flight/elevator</property>
+    <factor>1</factor>
+    <interpolation>
+      <entry><ind>-1   </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 0   </ind><dep> 0    </dep></entry>
+      <entry><ind> 0.7 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 1   </ind><dep>-0.03 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1   </x>
+      <y> 0   </y>
+      <z> 0.6 </z>
+    </axis>
+  </animation>
+
+  <!--animation left hand-->
+  <animation>
+    <type>rotate</type>
+    <object-name>handl</object-name>
+    <property>/controls/engines/engine/throttle</property>
+		<factor>-20</factor>
+		<offset-deg>20</offset-deg>
+    <center>
+      <x-m> -3.829 </x-m>
+      <y-m> -0.910 </y-m>
+      <z-m> -0.983 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!--animation left forearm-->
+  <animation>
+    <type>rotate</type>
+    <object-name>forearml</object-name>
+    <property>/controls/engines/engine/throttle</property>
+		<factor>-20</factor>
+		<offset-deg>20</offset-deg>
+    <center>
+      <x-m> -3.829 </x-m>
+      <y-m> -0.910 </y-m>
+      <z-m> -0.983 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!--animation left arm-->
+  <animation>
+    <type>rotate</type>
+    <object-name>arml</object-name>
+    <property>/controls/engines/engine/throttle</property>
+		<factor>15</factor>
+		<offset-deg>-10</offset-deg>
+    <center>
+      <x-m> -3.653 </x-m>
+      <y-m> -0.890 </y-m>
+      <z-m> -0.300 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- feet -->
+  <animation>
+    <type>rotate</type>
+    <object-name>footl</object-name>
+      <property>controls/flight/rudder</property>
+    <factor>14</factor>
+    <center>
+      <x-m> -4.552 </x-m>
+      <y-m> -0.463 </y-m>
+      <z-m> -1.009 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>footr</object-name>
+       <property>controls/flight/rudder</property>
+    <factor>-14</factor>
+    <center>
+      <x-m> -4.552 </x-m>
+      <y-m> -0.463 </y-m>
+      <z-m> -1.009 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- left leg -->
+  <animation>
+    <type>rotate</type>
+    <object-name>legl</object-name>
+      <property>controls/flight/rudder</property>
+    <factor>-6</factor>
+    <center>
+      <x-m> -4.300 </x-m>
+      <y-m> -0.463 </y-m>
+      <z-m> -0.800 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>legl</object-name>
+      <property>controls/flight/rudder</property>
+    <factor>1</factor>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0     </dep></entry>
+      <entry><ind>-1 </ind><dep>-0.020 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>legl</object-name>
+      <property>controls/flight/aileron</property>
+    <factor>6</factor>
+    <interpolation>
+      <entry><ind> 0   </ind><dep> 0 </dep></entry>
+      <entry><ind>-0.5 </ind><dep> 0 </dep></entry>
+      <entry><ind>-1   </ind><dep>-6 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -4.552 </x-m>
+      <y-m> -0.893 </y-m>
+      <z-m> -1.009 </z-m>
+    </center>
+    <axis>
+      <x>-0.1 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <!-- left thigh -->
+  <animation>
+    <type>rotate</type>
+    <object-name>thighl</object-name>
+      <property>controls/flight/rudder</property>
+    <factor>1.2</factor>
+    <center>
+      <x-m> -3.600 </x-m>
+      <y-m> -0.463 </y-m>
+      <z-m> -0.600 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>thighl</object-name>
+      <property>controls/flight/aileron</property>
+    <factor>3</factor>
+    <interpolation>
+      <entry><ind> 0   </ind><dep> 0 </dep></entry>
+      <entry><ind>-0.5 </ind><dep> 0 </dep></entry>
+      <entry><ind>-1   </ind><dep> 3 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.730 </x-m>
+      <y-m> -0.890 </y-m>
+      <z-m> -0.630 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <!-- right leg -->
+  <animation>
+    <type>rotate</type>
+    <object-name>legr</object-name>
+       <property>controls/flight/rudder</property>
+    <factor>6</factor>
+    <center>
+      <x-m> -4.300 </x-m>
+      <y-m> -0.463 </y-m>
+      <z-m> -0.800 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>legr</object-name>
+      <property>controls/flight/rudder</property>
+    <factor>1</factor>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0     </dep></entry>
+      <entry><ind> 1 </ind><dep>-0.020 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>legr</object-name>
+      <property>controls/flight/aileron</property>
+    <factor>6</factor>
+    <interpolation>
+      <entry><ind> 0   </ind><dep> 0 </dep></entry>
+      <entry><ind> 0.5 </ind><dep> 0 </dep></entry>
+      <entry><ind> 1   </ind><dep> 6 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -4.552 </x-m>
+      <y-m> -0.463 </y-m>
+      <z-m> -1.009 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <!-- right thigh -->
+  <animation>
+    <type>rotate</type>
+    <object-name>thighr</object-name>
+      <property>controls/flight/rudder</property>
+    <factor>-1.2</factor>
+    <center>
+      <x-m> -3.600 </x-m>
+      <y-m> -0.463 </y-m>
+      <z-m> -0.600 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>thighr</object-name>
+      <property>controls/flight/aileron</property>
+    <factor>-3</factor>
+    <interpolation>
+      <entry><ind> 0   </ind><dep> 0 </dep></entry>
+      <entry><ind> 0.5 </ind><dep> 0 </dep></entry>
+      <entry><ind> 1   </ind><dep>-3 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.730 </x-m>
+      <y-m> -0.590 </y-m>
+      <z-m> -0.630 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+
