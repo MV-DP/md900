@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+<model>
+		<name>Interior</name>
+		<path>Aircraft/md900/Models/cockpit.ac</path>
+
+		<offsets>
+
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+
+			<pitch-deg>0</pitch-deg>
+
+		</offsets>
+
+
+
+</model>
+<model>
+		<name>seats</name>
+		<path>Aircraft/md900/Models/seat.ac</path>
+
+		<offsets>
+
+			<x-m>0.2</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.3</z-m>
+
+			<pitch-deg>0</pitch-deg>
+
+		</offsets>
+
+
+
+</model>
+ <animation>
+  <type>pick</type>
+  <object-name>acmat_10.006</object-name>
+  <visible>true</visible>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>nasal</command>
+    <script>md900.leftFrontDoor.toggle();</script>
+   </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>acmat_10.006</object-name>
+   <property>sim/model/md900/door-positions/leftFrontDoor/position-norm</property>
+   <interpolation>
+    <entry>
+     <ind>0.0</ind>
+     <dep>0.0</dep>
+    </entry>
+    <entry>
+     <ind>0.25</ind>
+     <dep>0</dep>
+    </entry>
+    <entry>
+     <ind>1</ind>
+     <dep>70.0</dep>
+    </entry>
+   </interpolation>
+   <center>
+    <x-m>-2.33468</x-m>
+    <y-m>-0.80923</y-m>
+    <z-m>0.18438</z-m>
+   </center>
+   <axis>
+    <x>-0.289498</x>
+    <y>-0.005941</y>
+    <z>-0.503452</z>
+   </axis>
+ </animation>
+
+<animation>
+ <type>pick</type>
+ <object-name>acmat_10.001</object-name>
+ <visible>true</visible>
+ <action>
+  <button>0</button>
+  <repeatable>false</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>md900.rightFrontDoor.toggle();</script>
+  </binding>
+ </action>
+</animation>
+
+<animation>
+ <type>rotate</type>
+ <object-name>acmat_10.001</object-name>
+ <property>sim/model/md900/door-positions/rightFrontDoor/position-norm</property>
+ <interpolation>
+  <entry>
+   <ind>0.0</ind>
+   <dep>0.0</dep>
+  </entry>
+  <entry>
+   <ind>0.25</ind>
+   <dep>0</dep>
+  </entry>
+  <entry>
+   <ind>1</ind>
+   <dep>70.0</dep>
+  </entry>
+ </interpolation>
+ <center>
+  <x-m>-2.33533</x-m>
+  <y-m>0.81272</y-m>
+  <z-m>0.18394</z-m>
+ </center>
+ <axis>
+  <x>0.289498</x>
+  <y>0.005941</y>
+  <z>0.503452</z>
+ </axis>
+</animation>
+
+<animation>
+ <type>pick</type>
+ <object-name>acmat_10.010</object-name>
+ <visible>true</visible>
+ <action>
+  <button>0</button>
+  <repeatable>false</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>md900.leftBackDoor.toggle();</script>
+  </binding>
+ </action>
+</animation>
+
+<animation>
+ <type>translate</type>
+ <object-name>acmat_10.010</object-name>
+ <property>sim/model/md900/door-positions/leftBackDoor/position-norm</property>
+ <interpolation>
+  <entry>
+   <ind>0.0</ind>
+   <dep>0.0</dep>
+  </entry>
+  <entry>
+   <ind>0.25</ind>
+   <dep>0</dep>
+  </entry>
+  <entry>
+   <ind>0.5</ind>
+   <dep>0.07</dep>
+  </entry>
+  <entry>
+   <ind>1.0</ind>
+   <dep>0.07</dep>
+  </entry>
+ </interpolation>
+ <axis>
+  <x>0</x>
+  <y>-1</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+<animation>
+ <type>translate</type>
+ <object-name>acmat_10.010</object-name>
+ <property>sim/model/md900/door-positions/leftBackDoor/position-norm</property>
+ <interpolation>
+  <entry>
+   <ind>0.0</ind>
+   <dep>0.0</dep>
+  </entry>
+  <entry>
+   <ind>0.5</ind>
+   <dep>0</dep>
+  </entry>
+  <entry>
+   <ind>1.0</ind>
+   <dep>1.200</dep>
+  </entry>
+ </interpolation>
+ <axis>
+  <x>1</x>
+  <y>0</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+<animation>
+ <type>pick</type>
+ <object-name>acmat_10.004</object-name>
+ <visible>true</visible>
+ <action>
+  <button>0</button>
+  <repeatable>false</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>md900.rightBackDoor.toggle();</script>
+  </binding>
+ </action>
+</animation>
+
+<animation>
+ <type>translate</type>
+ <object-name>acmat_10.004</object-name>
+ <property>sim/model/md900/door-positions/rightBackDoor/position-norm</property>
+ <interpolation>
+  <entry>
+   <ind>0.0</ind>
+   <dep>0.0</dep>
+  </entry>
+  <entry>
+   <ind>0.25</ind>
+   <dep>0</dep>
+  </entry>
+  <entry>
+   <ind>0.5</ind>
+   <dep>0.07</dep>
+  </entry>
+  <entry>
+   <ind>1.0</ind>
+   <dep>0.07</dep>
+  </entry>
+ </interpolation>
+ <axis>
+  <x>0</x>
+  <y>1</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+<animation>
+ <type>translate</type>
+ <object-name>acmat_10.004</object-name>
+ <property>sim/model/md900/door-positions/rightBackDoor/position-norm</property>
+ <interpolation>
+  <entry>
+   <ind>0.0</ind>
+   <dep>0.0</dep>
+  </entry>
+  <entry>
+   <ind>0.5</ind>
+   <dep>0</dep>
+  </entry>
+  <entry>
+   <ind>1.0</ind>
+   <dep>1.200</dep>
+  </entry>
+ </interpolation>
+ <axis>
+  <x>1</x>
+  <y>0</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+</PropertyList>

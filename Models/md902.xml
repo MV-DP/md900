@@ -1,0 +1,966 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>md902.ac</path>
+  
+<nasal>
+        <load>
+            var livery_update = aircraft.livery_update.new(
+	    "Aircraft/md900/Models/liveries", 10,
+	    func { print("md900 livery update") });
+        </load>
+
+        <unload>
+            livery_update.stop();
+        </unload>
+</nasal>
+
+<animation>
+ <type>material</type>
+ <object-name>fuselage</object-name>
+ <object-name>fuselage.007</object-name>
+ <object-name>Reardoor</object-name>
+ <object-name>rudder.L</object-name>
+ <object-name>udder.R</object-name>
+ <object-name>BackDoor.L</object-name>
+ <object-name>BackDoor.R</object-name>
+ <object-name>FrontDoor.L</object-name>
+ <object-name>FrontDoor.R</object-name>
+ <object-name>NOTAR</object-name>
+ <object-name>wirecutter-up.001</object-name>
+ <object-name>wirecutter-up</object-name>
+ <object-name>wirecutter-down</object-name>
+ <object-name>Radar-nose</object-name>
+ <object-name>nose-mount</object-name>
+ <object-name>longerskids</object-name>
+ <object-name>emergencyfloats</object-name>
+ <object-name>winchfix</object-name>
+ <object-name>winch</object-name>
+ <object-name>AirIntake</object-name>
+ <property-base>sim/model/livery</property-base>
+ <texture-prop>texture</texture-prop>
+ <texture>UVmap.png</texture>
+</animation>
+
+<animation>
+ <type>shader</type>
+ <shader>chrome</shader>
+ <texture>Aircraft/md902/Models/chrome2.png</texture>
+ <object-name>mirrors.001</object-name>
+</animation>
+  
+<model>
+		<name>Interior</name>
+		<path>Aircraft/md900/Models/cockpit.xml</path>
+
+		<offsets>
+
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+
+			<pitch-deg>0</pitch-deg>
+
+		</offsets>
+</model>
+
+<model>
+		<name>Cabin</name>
+		<path>Aircraft/md900/Models/Variants/cabin.xml</path>
+
+		<offsets>
+
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+
+			<pitch-deg>0</pitch-deg>
+
+		</offsets>
+</model>
+
+<model>
+		<name>Interior</name>
+		<path>Aircraft/md900/Models/controlls.xml</path>
+
+		<offsets>
+
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+
+			<pitch-deg>0</pitch-deg>
+
+		</offsets>
+</model>
+ <animation>
+  <type>pick</type>
+  <object-name>FrontDoor.L</object-name>
+  <visible>true</visible>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>nasal</command>
+    <script>md900.leftFrontDoor.toggle();</script>
+   </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>FrontDoor.L</object-name>
+  <object-name>FDLglas</object-name>
+   <property>sim/model/md900/door-positions/leftFrontDoor/position-norm</property>
+   <interpolation>
+    <entry>
+     <ind>0.0</ind>
+     <dep>0.0</dep>
+    </entry>
+    <entry>
+     <ind>0.25</ind>
+     <dep>0</dep>
+    </entry>
+    <entry>
+     <ind>1</ind>
+     <dep>70.0</dep>
+    </entry>
+   </interpolation>
+   <center>
+    <x-m>-2.33468</x-m>
+    <y-m>-0.80923</y-m>
+    <z-m>0.18438</z-m>
+   </center>
+   <axis>
+    <x>-0.289498</x>
+    <y>-0.005941</y>
+    <z>-0.503452</z>
+   </axis>
+ </animation>
+
+<animation>
+ <type>pick</type>
+ <object-name>FrontDoor.R</object-name>
+ <visible>true</visible>
+ <action>
+  <button>0</button>
+  <repeatable>false</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>md900.rightFrontDoor.toggle();</script>
+  </binding>
+ </action>
+</animation>
+
+<animation>
+ <type>rotate</type>
+ <object-name>FrontDoor.R</object-name>
+ <object-name>FDRglas</object-name>
+ <property>sim/model/md900/door-positions/rightFrontDoor/position-norm</property>
+ <interpolation>
+  <entry>
+   <ind>0.0</ind>
+   <dep>0.0</dep>
+  </entry>
+  <entry>
+   <ind>0.25</ind>
+   <dep>0</dep>
+  </entry>
+  <entry>
+   <ind>1</ind>
+   <dep>70.0</dep>
+  </entry>
+ </interpolation>
+ <center>
+  <x-m>-2.33533</x-m>
+  <y-m>0.81272</y-m>
+  <z-m>0.18394</z-m>
+ </center>
+ <axis>
+  <x>0.289498</x>
+  <y>0.005941</y>
+  <z>0.503452</z>
+ </axis>
+</animation>
+
+<animation>
+ <type>pick</type>
+ <object-name>BackDoor.L</object-name>
+ <visible>true</visible>
+ <action>
+  <button>0</button>
+  <repeatable>false</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>md900.leftBackDoor.toggle();</script>
+  </binding>
+ </action>
+</animation>
+
+<animation>
+ <type>translate</type>
+ <object-name>BackDoor.L</object-name>
+ <object-name>L</object-name>
+ <object-name>BDLglas</object-name>
+ <property>sim/model/md900/door-positions/leftBackDoor/position-norm</property>
+ <interpolation>
+  <entry>
+   <ind>0.0</ind>
+   <dep>0.0</dep>
+  </entry>
+  <entry>
+   <ind>0.25</ind>
+   <dep>0</dep>
+  </entry>
+  <entry>
+   <ind>0.5</ind>
+   <dep>0.07</dep>
+  </entry>
+  <entry>
+   <ind>1.0</ind>
+   <dep>0.07</dep>
+  </entry>
+ </interpolation>
+ <axis>
+  <x>0</x>
+  <y>-1</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+<animation>
+ <type>translate</type>
+ <object-name>BackDoor.L</object-name>
+ <object-name>L</object-name>
+ <object-name>BDLglas</object-name>
+ <property>sim/model/md900/door-positions/leftBackDoor/position-norm</property>
+ <interpolation>
+  <entry>
+   <ind>0.0</ind>
+   <dep>0.0</dep>
+  </entry>
+  <entry>
+   <ind>0.5</ind>
+   <dep>0</dep>
+  </entry>
+  <entry>
+   <ind>1.0</ind>
+   <dep>1.200</dep>
+  </entry>
+ </interpolation>
+ <axis>
+  <x>1</x>
+  <y>0</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+<animation>
+ <type>pick</type>
+ <object-name>BackDoor.R</object-name>
+ <visible>true</visible>
+ <action>
+  <button>0</button>
+  <repeatable>false</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>md900.rightBackDoor.toggle();</script>
+  </binding>
+ </action>
+</animation>
+
+<animation>
+ <type>translate</type>
+ <object-name>BackDoor.R</object-name>
+ <object-name>R</object-name>
+ <object-name>BDRglas</object-name>
+ <property>sim/model/md900/door-positions/rightBackDoor/position-norm</property>
+ <interpolation>
+  <entry>
+   <ind>0.0</ind>
+   <dep>0.0</dep>
+  </entry>
+  <entry>
+   <ind>0.25</ind>
+   <dep>0</dep>
+  </entry>
+  <entry>
+   <ind>0.5</ind>
+   <dep>0.07</dep>
+  </entry>
+  <entry>
+   <ind>1.0</ind>
+   <dep>0.07</dep>
+  </entry>
+ </interpolation>
+ <axis>
+  <x>0</x>
+  <y>1</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+<animation>
+ <type>translate</type>
+ <object-name>BackDoor.R</object-name>
+ <object-name>R</object-name>
+ <object-name>BDRglas</object-name>
+ <property>sim/model/md900/door-positions/rightBackDoor/position-norm</property>
+ <interpolation>
+  <entry>
+   <ind>0.0</ind>
+   <dep>0.0</dep>
+  </entry>
+  <entry>
+   <ind>0.5</ind>
+   <dep>0</dep>
+  </entry>
+  <entry>
+   <ind>1.0</ind>
+   <dep>1.200</dep>
+  </entry>
+ </interpolation>
+ <axis>
+  <x>1</x>
+  <y>0</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>Reardoor</object-name>
+  <visible>true</visible>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>nasal</command>
+    <script>md900.leftRearDoor.toggle();</script>
+   </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Reardoor</object-name>
+  <property>sim/model/md900/door-positions/leftRearDoor/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0.0</dep>
+   </entry>
+   <entry>
+    <ind>0.25</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1</ind>
+    <dep>110.0</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x1-m>1.8500</x1-m>
+   <y1-m>-0.33072</y1-m>
+   <z1-m>0.14145</z1-m>
+   <x2-m>1.63755</x2-m>
+   <y2-m>-0.52781</y2-m>
+   <z2-m>-0.34036</z2-m>
+  </axis>
+ </animation>
+
+<animation>
+ <type>rotate</type>
+ <object-name>NOTAR</object-name>
+ <object-name>NOTAR.001</object-name>
+ <property>surface-positions/rudder-pos-norm</property>
+ <factor>90</factor>
+ <axis>
+  <x1-m>6.13144</x1-m>
+  <y1-m>0.00000</y1-m>
+  <z1-m>0.52884</z1-m>
+  <x2-m>6.93244</x2-m>
+  <y2-m>0.00000</y2-m>
+  <z2-m>0.50690</z2-m>
+ </axis>
+</animation>
+
+<model>
+ <path>Aircraft/md900/Models/MainRotor/mainrotor.xml</path>
+ <offsets>
+  <x-m>0.0</x-m>
+  <y-m>0.0</y-m>
+  <z-m>2.0</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> 0 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
+<model>
+ <path>Aircraft/md900/Models/flightdeck.xml</path>
+ <offsets>
+  <x-m>0.93</x-m>
+  <y-m>0.0</y-m>
+  <z-m>-1.2</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> 0 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
+<model>
+ <path>Aircraft/md900/Models/light/GreenLight.xml</path>
+ <offsets>
+  <x-m>5.0423</x-m>
+  <y-m>1.4500</y-m>
+  <z-m>0.9606</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> 0 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
+<model>
+ <path>Aircraft/md900/Models/light/RedLight.xml</path>
+ <offsets>
+  <x-m>5.0423</x-m>
+  <y-m>-1.4500</y-m>
+  <z-m>0.9606</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> 0 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
+<model>
+ <path>Aircraft/md900/Models/light/beacon.xml</path>
+ <offsets>
+  <x-m>5.0423</x-m>
+  <y-m>0.0000</y-m>
+  <z-m>0.9610</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> 0 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
+<model>
+ <path>Aircraft/md900/Models/light/beacon.xml</path>
+ <offsets>
+  <x-m>5.5211</x-m>
+  <y-m>0.0000</y-m>
+  <z-m>0.1618</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> 0 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
+<model>
+ <path>Aircraft/md900/Models/light/WhiteLight.xml</path>
+ <offsets>
+  <x-m>5.1723</x-m>
+  <y-m>0.0000</y-m>
+  <z-m>0.9610</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> 0 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
+<model>
+ <path>Aircraft/md900/Models/light/WhiteLight.xml</path>
+ <offsets>
+  <x-m>5.6511</x-m>
+  <y-m>0.0000</y-m>
+  <z-m>0.1618</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> 0 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
+<model>
+ <name>Landlight</name>
+ <path>Aircraft/md900/Models/light/landlight.xml</path>
+ <offsets>
+  <x-m>-1.4352</x-m>
+  <y-m>-0.1708</y-m>
+  <z-m>-0.6632</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> 0 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
+<model>
+ <name>Landlight</name>
+ <path>Aircraft/md900/Models/light/landlight.xml</path>
+ <offsets>
+  <x-m>-1.4352</x-m>
+  <y-m>0.1708</y-m>
+  <z-m>-0.6632</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> 0 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
+<model>
+ <name>Landlight</name>
+ <path>Aircraft/md900/Models/light/landlight.xml</path>
+ <offsets>
+  <x-m>-2.1174</x-m>
+  <y-m>0.0754</y-m>
+  <z-m>-0.5750</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> -90 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
+<model>
+ <name>mainrotors_dirt</name>
+ <path>Aircraft/md900/Models/particle/rotor_particle.xml</path>
+ <offsets>
+  <x-m>0.0000</x-m>
+  <y-m>0.0000</y-m>
+  <z-m>0.0000</z-m>
+ </offsets>			
+</model>
+ <animation>
+    <type>select</type>
+      <object-name>Landlight</object-name>
+       <condition>
+         <equals>
+           <property>controls/switches/landing-light</property>
+           <value> 1 </value>
+         </equals>
+       </condition>
+  </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>udder.R</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>15.0</factor>
+
+  <center>
+   <x-m>4.9987</x-m>
+   <y-m>1.4036</y-m>
+   <z-m>1.0364</z-m>
+  </center>
+
+  <axis>
+   <x>0.000000</x>
+   <y>0.000000</y>
+   <z>1.000000</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>rudder.L</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>15.0</factor>
+
+  <center>
+   <x-m>4.9987</x-m>
+   <y-m>-1.4036</y-m>
+   <z-m>1.0364</z-m>
+  </center>
+
+  <axis>
+   <x>0.000000</x>
+   <y>0.000000</y>
+   <z>1.000000</z>
+  </axis>
+ </animation>
+ <!-- Wipers -->
+ <animation>
+  <type>rotate</type>
+  <object-name>RHwiper</object-name>
+  <object-name>RHwiper.blade</object-name>
+  <property>controls/electric/wipers/position-norm</property>
+  <factor>90.0</factor>
+  <center>
+   <x-m>-3.04389</x-m>
+   <y-m>-0.09764</y-m>
+   <z-m>0.36385</z-m>
+  </center>
+  <axis>
+   <x>-0.688</x>
+   <y>0.235</y>
+   <z>0.687</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>RHwiper.blade</object-name>
+  <property>controls/electric/wipers/position-norm</property>
+  <factor>-90.0</factor>
+  <center>
+   <x-m>-2.53779</x-m>
+   <y-m>-0.05147</y-m>
+   <z-m>0.79664</z-m>
+  </center>
+  <axis>
+   <x>-0.688</x>
+   <y>0.235</y>
+   <z>0.687</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>LHwiper</object-name>
+  <object-name>LHwiper.blade</object-name>
+  <property>controls/electric/wipers/position-norm</property>
+  <factor>-90.0</factor>
+  <center>
+   <x-m>-3.04389</x-m>
+   <y-m>0.09764</y-m>
+   <z-m>0.36385</z-m>
+  </center>
+  <axis>
+   <x>-0.688</x>
+   <y>-0.235</y>
+   <z>0.687</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>LHwiper.blade</object-name>
+  <property>controls/electric/wipers/position-norm</property>
+  <factor>90.0</factor>
+  <center>
+   <x-m>-2.53779</x-m>
+   <y-m>0.05147</y-m>
+   <z-m>0.79664</z-m>
+  </center>
+  <axis>
+   <x>-0.688</x>
+   <y>-0.235</y>
+   <z>0.687</z>
+  </axis>
+ </animation>
+ <model>
+  <name>Pilot</name>
+  <path>Aircraft/md900/Models/People/pilot.xml</path>
+  <offsets>
+   <x-m> 2.2 </x-m>
+   <y-m> 1.1 </y-m>
+   <z-m> 0.9 </z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>searchlight_SX16_Nose</name>
+  <path>Aircraft/md900/Models/SearchLight/searchlight_SX16.xml</path>
+  <offsets>
+   <x-m> -2.800 </x-m>
+   <y-m> 0.0 </y-m>
+   <z-m> -0.7 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>searchlight_SX16_Left</name>
+  <path>Aircraft/md900/Models/SearchLight/searchlight_SX16.xml</path>
+  <offsets>
+   <x-m> -2.450 </x-m>
+   <y-m> -1.100 </y-m>
+   <z-m> -0.600 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>searchlight_SX16_Back</name>
+  <path>Aircraft/md900/Models/SearchLight/searchlight_SX16.xml</path>
+  <offsets>
+   <x-m> 2.000 </x-m>
+   <y-m> 0.0 </y-m>
+   <z-m> -0.700</z-m>
+   <pitch-deg>-45</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>searchlight_SX16_Left_Back</name>
+  <path>Aircraft/md900/Models/SearchLight/searchlight_SX16.xml</path>
+  <offsets>
+   <x-m>  1.500 </x-m>
+   <y-m> -1.100 </y-m>
+   <z-m> -0.660 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>searchlight_SX5_Left_Back</name>
+  <path>Aircraft/md900/Models/SearchLight/searchlight_SX5.xml</path>
+  <offsets>
+   <x-m> 1.500 </x-m>
+   <y-m> -1.100 </y-m>
+   <z-m> -0.660 </z-m>
+  <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>searchlight_A800</name>
+  <path>Aircraft/md900/Models/SearchLight/searchlight_A800.xml</path>
+  <offsets>
+   <x-m>  1.500 </x-m>
+   <y-m> -1.100 </y-m>
+   <z-m> -0.660 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>FLIR_SAFIRE_Right_Grey</name>
+  <path>Aircraft/md900/Models/SearchLight/FLIR-Star-SAFIRE-380-HD-Grey.xml</path>
+  <offsets>
+   <x-m> -2.450 </x-m>
+   <y-m>  1.100 </y-m>
+   <z-m> -0.775 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>FLIR_SAFIRE_Nose_Grey</name>
+  <path>Aircraft/md900/Models/SearchLight/FLIR-Star-SAFIRE-380-HD-Grey.xml</path>
+  <offsets>
+   <x-m> -3.08615 </x-m>
+   <y-m>  0.000 </y-m>
+   <z-m> -0.86 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>FLIR_SAFIRE_Nose</name>
+  <path>Aircraft/md900/Models/SearchLight/FLIR-Star-SAFIRE-380-HD.xml</path>
+  <offsets>
+   <x-m> -3.08615 </x-m>
+   <y-m>  0.000 </y-m>
+   <z-m> -0.86 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>emergencyfloats</name>
+  <path>Aircraft/md900/Models/Floats/right_float.xml</path>
+  <offsets>
+   <x-m> -0.73000 </x-m>
+   <y-m>  1.19613 </y-m>
+   <z-m> -1.06305 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>emergencyfloats</name>
+  <path>Aircraft/md900/Models/Floats/right_float.xml</path>
+  <offsets>
+   <x-m>  1.48569 </x-m>
+   <y-m>  1.18666 </y-m>
+   <z-m> -0.94335 </z-m>
+   <pitch-deg>-15</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>emergencyfloats</name>
+  <path>Aircraft/md900/Models/Floats/left_float.xml</path>
+  <offsets>
+   <x-m> -0.74000 </x-m>
+   <y-m> -1.21176 </y-m>
+   <z-m> -1.06305 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>emergencyfloats</name>
+  <path>Aircraft/md900/Models/Floats/left_float.xml</path>
+  <offsets>
+   <x-m>  1.48569 </x-m>
+   <y-m> -1.22078 </y-m>
+   <z-m> -0.94335 </z-m>
+   <pitch-deg>-15</pitch-deg>
+  </offsets>
+ </model>
+ <animation>
+  <type>select</type>
+  <object-name>searchlight_A800</object-name>
+  <condition>
+   <property>sim/model/md900/searchlight_A800</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>FLIR_SAFIRE_Right_Grey</object-name>
+  <condition>
+   <property>sim/model/md900/FLIR_SAFIRE_Right_Grey</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>FLIR_SAFIRE_Nose_Grey</object-name>
+  <condition>
+   <property>sim/model/md900/FLIR_SAFIRE_Nose_Grey</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>FLIR_SAFIRE_Nose</object-name>
+  <condition>
+   <property>sim/model/md900/FLIR_SAFIRE_Nose</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>searchlight_SX16_Nose</object-name>
+  <condition>
+   <property>sim/model/md900/searchlight_SX16_Nose</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>searchlight_SX16_Left</object-name>
+  <condition>
+   <property>sim/model/md900/searchlight_SX16_Left</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>searchlight_SX16_Back</object-name>
+  <condition>
+   <property>sim/model/md900/searchlight_SX16_Back</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>searchlight_SX16_Left_Back</object-name>
+  <condition>
+   <property>sim/model/md900/searchlight_SX16_Left_Back</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>searchlight_SX5_Left_Back</object-name>
+  <condition>
+   <property>sim/model/md900/searchlight_SX5_Left_Back</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>backlightcon</object-name>
+  <condition>
+   <property>sim/model/md900/backlightcon</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>loudspeakers</object-name>
+  <condition>
+   <property>sim/model/md900/loudspeakers</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>multifunctionright</object-name>
+  <condition>
+   <property>sim/model/md900/multifunctionright</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>multifunctionleft</object-name>
+  <condition>
+   <property>sim/model/md900/multifunctionleft</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>multileftfront</object-name>
+  <condition>
+   <property>sim/model/md900/multileftfront</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>multileftback</object-name>
+  <condition>
+   <property>sim/model/md900/multileftback</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>multirightfront</object-name>
+  <condition>
+   <property>sim/model/md900/multirightfront</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>multirightback</object-name>
+  <condition>
+   <property>sim/model/md900/multirightback</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>mirrors</object-name>
+  <object-name>mirrors.001</object-name>
+  <condition>
+   <property>sim/model/md900/mirrors</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>bear-paws</object-name>
+  <condition>
+   <property>sim/model/md900/bear-paws</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>wirecutter-up.001</object-name>
+  <object-name>wirecutter-up</object-name>
+  <condition>
+   <property>sim/model/md900/wirecutter-up</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>wirecutter-down</object-name>
+  <condition>
+   <property>sim/model/md900/wirecutter-down</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>Radar-nose</object-name>
+  <condition>
+   <property>sim/model/md900/Radar-nose</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>nose-mount</object-name>
+  <condition>
+   <property>sim/model/md900/nose-mount</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>longerskids</object-name>
+  <condition>
+   <property>sim/model/md900/longerskids</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>emergencyfloats</object-name>
+  <condition>
+   <property>sim/model/md900/emergencyfloats</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>winchfix</object-name>
+  <condition>
+   <property>sim/model/md900/winchfix</property>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>winch</object-name>
+  <condition>
+   <property>sim/model/md900/winch</property>
+  </condition>
+ </animation>
+</PropertyList>
+

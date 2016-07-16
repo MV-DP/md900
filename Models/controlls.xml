@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+<model>
+		<name>Controlls</name>
+		<path>Aircraft/md900/Models/controlls.ac</path>
+
+		<offsets>
+
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+
+			<pitch-deg>0</pitch-deg>
+
+		</offsets>
+</model>
+ <animation>
+   <type>rotate</type>
+   <object-name>Stick.R</object-name>
+   <property>controls/flight/elevator</property>
+   <factor>-8</factor>
+     <center>
+       <x-m>-2.1690</x-m>
+       <y-m>0.4307</y-m>
+       <z-m>-0.1668</z-m>
+     </center>
+     <axis>
+       <x>0.0</x>
+       <y>1.0</y>
+       <z>0.0</z>
+     </axis>
+ </animation>
+ <animation>
+   <type>rotate</type>
+   <object-name>Stick.R</object-name>
+   <property>controls/flight/aileron</property>
+   <factor>-8</factor>
+     <center>
+       <x-m>-2.1690</x-m>
+       <y-m>0.4307</y-m>
+       <z-m>-0.1668</z-m>
+     </center>
+     <axis>
+       <x>1.0</x>
+       <y>0.0</y>
+       <z>0.0</z></axis>
+ </animation>
+ <animation>
+   <type>rotate</type>
+   <object-name>Stick.L</object-name>
+   <property>controls/flight/elevator</property>
+   <factor>-8</factor>
+     <center>
+       <x-m>-2.1690</x-m>
+       <y-m>-0.4307</y-m>
+       <z-m>-0.1668</z-m>
+     </center>
+     <axis>
+       <x>0.0</x>
+       <y>1.0</y>
+       <z>0.0</z>
+     </axis>
+ </animation>
+ <animation>
+   <type>rotate</type>
+   <object-name>Stick.L</object-name>
+   <property>controls/flight/aileron</property>
+   <factor>-8</factor>
+     <center>
+       <x-m>-2.1690</x-m>
+       <y-m>-0.4307</y-m>
+       <z-m>-0.1668</z-m>
+     </center>
+     <axis>
+       <x>1.0</x>
+       <y>0.0</y>
+       <z>0.0</z></axis>
+ </animation>
+ <animation>
+  <type>translate</type>
+  <object-name>Pedal.L</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>0.1</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>translate</type>
+  <object-name>Pedal.R</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>-0.1</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
