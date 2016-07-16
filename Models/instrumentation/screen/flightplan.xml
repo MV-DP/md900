@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    Syd Adams
+    Primus 1000 PFD  messages
+-->
+<PropertyList>
+
+  <name>PFD text</name>
+  <w-base>256</w-base>
+  <h-base>256</h-base>
+  <w>256</w>
+  <h>256</h>
+
+  <layers>
+    <layer>
+      <name>WP1</name>
+      <condition>
+        <greater-than>
+          <property>autopilot/route-manager/route/num</property>
+          <value>0</value>
+        </greater-than>
+      </condition>
+      <type>text</type>
+      <font>lcd</font>
+      <point-size>18</point-size>
+      <color>
+        <red>   0.1 </red>
+        <green> 1.0 </green>
+        <blue>  0.1 </blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>> </text>
+        </chunk>
+        <chunk>
+          <type>text-value</type>
+          <property>autopilot/route-manager/route/wp/id</property>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-110</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>95</offset>
+        </transformation>
+      </transformations>
+    </layer>
+             
+    <layer>
+      <name>WP2</name>
+      <condition>
+        <greater-than>
+          <property>autopilot/route-manager/route/num</property>
+          <value>1</value>
+        </greater-than>
+      </condition>
+      <type>text</type>
+      <font>lcd</font>
+      <point-size>18</point-size>
+      <color>
+        <red>   0.1 </red>
+        <green> 1.0 </green>
+        <blue>  0.1 </blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>text-value</type>
+          <property>autopilot/route-manager/route/wp[1]/id</property>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-100</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>44</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+    <layer>
+      <name>WP3</name>
+      <condition>
+        <greater-than>
+          <property>autopilot/route-manager/route/num</property>
+          <value>2</value>
+        </greater-than>
+      </condition>
+      <type>text</type>
+      <font>lcd</font>
+      <point-size>18</point-size>
+      <color>
+        <red>   0.1 </red>
+        <green> 1.0 </green>
+        <blue>  0.1 </blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>text-value</type>
+          <property>autopilot/route-manager/route/wp[2]/id</property>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-100</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-10</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+    <layer>
+      <name>WP4</name>
+      <condition>
+        <greater-than>
+          <property>autopilot/route-manager/route/num</property>
+          <value>3</value>
+        </greater-than>
+      </condition>
+      <type>text</type>
+      <font>lcd</font>
+      <point-size>18</point-size>
+      <color>
+        <red>   0.1 </red>
+        <green> 1.0 </green>
+        <blue>  0.1 </blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>text-value</type>
+          <property>autopilot/route-manager/route/wp[3]/id</property>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-100</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-62</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+    <layer>
+      <name>WP5</name>
+      <condition>
+        <greater-than>
+          <property>autopilot/route-manager/route/num</property>
+          <value>4</value>
+        </greater-than>
+      </condition>
+      <type>text</type>
+      <font>lcd</font>
+      <point-size>17</point-size>
+      <color>
+        <red>   0.1 </red>
+        <green> 1.0 </green>
+        <blue>  0.1 </blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>text-value</type>
+          <property>autopilot/route-manager/route/wp[4]/id</property>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-100</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-114</offset>
+        </transformation>
+      </transformations>
+    </layer>
+  </layers>
+
+</PropertyList>
