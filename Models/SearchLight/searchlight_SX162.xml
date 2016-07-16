@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Eurocopter EC 130 Searchlight SX-16 Nightsun from Spectrolab
+ This file is part of FlightGear, the free flight simulator
+ http://www.flightgear.org/
+
+ Copyright (C) 2013 Michael Habarta, mhabarta@freenet.de
+               animations, search light effects
+
+           Lightcones are based on the lightcone of the Alphajet
+           done by BARANGER Emmanuel: email: embaranger@free.fr
+           aka helijah in the FG world
+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+-->
+
+<PropertyList>
+
+  <path>SX16/searchlight.ac</path>
+
+  <!-- search light cone, derived from Alpha-Jet -->
+
+  <model>
+    <name>searchlight-cone</name>
+    <path>Aircraft/ec130/Models/SearchLight/SX16/light-cone.xml</path>
+    <offsets>
+      <x-m>-0.160 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>searchlight-cone-medium</name>
+    <path>Aircraft/ec130/Models/SearchLight/SX16/light-cone-medium.xml</path>
+    <offsets>
+      <x-m>-0.160 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>searchlight-cone-large</name>
+    <path>Aircraft/ec130/Models/SearchLight/SX16/light-cone-large.xml</path>
+    <offsets>
+      <x-m>-0.160 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>searchlight-cone-xlarge</name>
+    <path>Aircraft/ec130/Models/SearchLight/SX16/light-cone-xlarge.xml</path>
+    <offsets>
+      <x-m>-0.160 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+  <effect>
+    <inherits-from>Aircraft/ec130/Models/Effects/ec130reflectglas-uber</inherits-from>
+    <object-name>slight_filter_glass</object-name>
+  </effect>
+
+  <!-- searchlight grouping, select conditions -->
+  <animation>
+    <name>searchlight</name>
+    <object-name>slight_body</object-name>
+    <object-name>slight_backside</object-name>
+    <object-name>slight_service_cover</object-name>
+    <object-name>slight_glass</object-name>
+    <object-name>slight_cable1</object-name>
+    <object-name>slight_cable2</object-name>
+    <object-name>slight_cable3</object-name>
+  </animation>
+
+  <animation>
+    <name>searchlight_filter</name>
+    <object-name>slight_filter</object-name>
+    <object-name>slight_filter_glass</object-name>
+  </animation>
+
+  <animation>
+    <name>searchlight-gimbal</name>
+    <object-name>slight_gimbal</object-name>
+    <object-name>slight_drive_elevation</object-name>
+    <object-name>slight_drive_azimuth</object-name>
+    <object-name>slight_cable4</object-name>
+    <object-name>slight_cable5</object-name>
+    <object-name>slight_cable6</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>searchlight</object-name>
+    <object-name>searchlight-gimbal</object-name>
+    <condition>
+      <property>sim/model/ec130/searchlight</property>
+      <not-equals>
+        <property>sim/current-view/name</property>
+        <value>Searchlight View</value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>searchlight_filter</object-name>
+    <object-name>slight_filter_holdl</object-name>
+    <object-name>slight_filter_holdr</object-name>
+    <condition>
+      <property>sim/model/ec130/searchlight</property>
+      <property>sim/model/ec130/searchlight_filter</property>
+      <not-equals>
+        <property>sim/current-view/name</property>
+        <value>Searchlight View</value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>slight_disk</object-name>
+    <condition>
+      <property>sim/model/ec130/searchlight</property>
+      <property>sim/model/searchlight/active</property>
+      <property>controls/electric/engine/generator</property>
+      <not-equals>
+        <property>sim/current-view/name</property>
+        <value>Searchlight View</value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  <!-- searchlight movements -->
+  <animation>
+    <type>rotate</type>
+    <object-name>searchlight-gimbal</object-name>
+    <object-name>searchlight</object-name>
+    <object-name>searchlight_filter</object-name>
+    <object-name>slight_filter_holdl</object-name>
+    <object-name>slight_filter_holdr</object-name>
+    <object-name>slight_disk</object-name>
+    <object-name>searchlight-cone</object-name>
+    <object-name>searchlight-cone-medium</object-name>
+    <object-name>searchlight-cone-large</object-name>
+    <object-name>searchlight-cone-xlarge</object-name>
+    <property>sim/model/searchlight/heading-deg</property>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>searchlight</object-name>
+    <object-name>searchlight_filter</object-name>
+    <object-name>slight_filter_holdl</object-name>
+    <object-name>slight_filter_holdr</object-name>
+    <object-name>slight_disk</object-name>
+    <object-name>searchlight-cone</object-name>
+    <object-name>searchlight-cone-medium</object-name>
+    <object-name>searchlight-cone-large</object-name>
+    <object-name>searchlight-cone-xlarge</object-name>
+    <property>sim/model/searchlight/elevation-deg</property>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- slight cable animations -->
+  <animation>
+    <type>rotate</type>
+    <object-name>slight_cable1</object-name>
+    <object-name>slight_cable2</object-name>
+    <property>sim/model/searchlight/elevation-deg</property>
+    <factor>0.5</factor>
+    <center>
+      <x-m> 0.00 </x-m>
+      <y-m> 0.10 </y-m>
+      <z-m> 0.06 </z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>-0.5</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>slight_cable2</object-name>
+    <property>sim/model/searchlight/elevation-deg</property>
+    <factor>-0.2</factor>
+    <center>
+      <x-m> 0.24 </x-m>
+      <y-m> 0.20 </y-m>
+      <z-m> 0.00 </z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>slight_cable3</object-name>
+    <property>sim/model/searchlight/elevation-deg</property>
+    <factor>-0.6</factor>
+    <center>
+      <x-m> 0.11 </x-m>
+      <y-m> 0.00 </y-m>
+      <z-m> 0.10 </z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>slight_cable3</object-name>
+    <property>sim/model/searchlight/elevation-deg</property>
+    <factor>1</factor>
+    <offset>0</offset>
+    <interpolation>
+      <entry><ind>  3.0 </ind><dep> 0.007</dep></entry>
+      <entry><ind>  0.0 </ind><dep> 0.000</dep></entry>
+      <entry><ind>-50.0 </ind><dep>-0.035</dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>slight_cable3</object-name>
+    <property>sim/model/searchlight/elevation-deg</property>
+    <factor>1</factor>
+    <offset>0</offset>
+    <interpolation>
+      <entry><ind>  3.0 </ind><dep> 0.000</dep></entry>
+      <entry><ind>  0.0 </ind><dep> 0.000</dep></entry>
+      <entry><ind>-50.0 </ind><dep> 0.060</dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>slight_cable4</object-name>
+    <property>sim/model/searchlight/elevation-deg</property>
+    <factor>-0.6</factor>
+    <center>
+      <x-m> -0.04 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.30 </z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>slight_cable4</object-name>
+    <property>sim/model/searchlight/elevation-deg</property>
+    <factor>0.2</factor>
+    <center>
+      <x-m> 0.02 </x-m>
+      <y-m> 0.00 </y-m>
+      <z-m> 0.16 </z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>slight_cable4</object-name>
+    <property>sim/model/searchlight/elevation-deg</property>
+    <factor>1</factor>
+    <offset>0</offset>
+    <interpolation>
+      <entry><ind>  3.0 </ind><dep> 0.000</dep></entry>
+      <entry><ind>  0.0 </ind><dep> 0.000</dep></entry>
+      <entry><ind>-50.0 </ind><dep> 0.020</dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>slight_cable4</object-name>
+    <property>sim/model/searchlight/elevation-deg</property>
+    <factor>1</factor>
+    <offset>0</offset>
+    <interpolation>
+      <entry><ind>  3.0 </ind><dep>-0.000</dep></entry>
+      <entry><ind>  0.0 </ind><dep> 0.000</dep></entry>
+      <entry><ind>-50.0 </ind><dep> 0.040</dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>slight_cable5</object-name>
+    <property>sim/model/searchlight/elevation-deg</property>
+    <factor>-0.5</factor>
+    <center>
+      <x-m> -0.04 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.30 </z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- pick animations -->
+  <!-- toggle searchlight power on/off -->
+  <animation>
+    <type>pick</type>
+    <object-name>slight_body</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <condition>
+          <property>controls/electric/engine/generator</property>
+        </condition>
+        <command>nasal</command>
+        <script>ec130.slight_toggle_power()</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>slight_drive_azimuth</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          var h = getprop("sim/model/searchlight/sx16/heading-default-deg");
+          var p = getprop("sim/model/searchlight/heading-deg") - h;
+          if ( p &lt; 0 ) { p=p*-1.0 };
+          <!-- slew rate 18deg/sec -->
+          var t = p/18.0;
+          interpolate("sim/model/searchlight/heading-deg", h, t);
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>slight_drive_elevation</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          var e = getprop("sim/model/searchlight/sx16/elevation-default-deg");
+          var p = getprop("sim/model/searchlight/elevation-deg") - e;
+          if ( p &lt; 0 ) { p=p*-1.0 };
+          var t = p/18.0;
+          interpolate("sim/model/searchlight/elevation-deg", e, t);
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>slight_gimbal</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>ec130.slight_reset()</script>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- cycle searchlight -->
+  <animation>
+    <type>pick</type>
+    <object-name>slight_service_cover</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <condition>
+            <property>sim/model/searchlight/active</property>
+          </condition>
+          <command>nasal</command>
+          <script>ec130.slight_cycle()</script>
+        </binding>
+    </action>
+  </animation>
+
+  <!-- pause searchlight -->
+  <animation>
+    <type>pick</type>
+    <object-name>slight_backside</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <condition>
+            <property>sim/model/searchlight/active</property>
+          </condition>
+          <command>property-toggle</command>
+          <property>sim/model/searchlight/paused</property>
+        </binding>
+    </action>
+  </animation>
+
+  <!-- rotation filter -->
+  <animation>
+    <type>rotate</type>
+    <object-name>searchlight_filter</object-name>
+    <property>sim/model/searchlight/filter/position-norm</property>
+    <factor> 92.0 </factor>
+    <center>
+      <x-m> -0.059 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.066 </z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>searchlight_filter</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          ec130.slight_toggle_cycle_filter();
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- searchlight cone animations -->
+  <animation>
+    <type>select</type>
+    <object-name>searchlight-cone</object-name>
+    <condition>
+      <property>sim/model/ec130/searchlight</property>
+      <property>sim/model/searchlight/active</property>
+      <property>controls/electric/engine/generator</property>
+      <not>
+        <property>sim/model/searchlight/paused</property>
+      </not>
+      <equals>
+        <property>sim/model/searchlight/state</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>searchlight-cone-medium</object-name>
+    <condition>
+      <property>sim/model/ec130/searchlight</property>
+      <property>sim/model/searchlight/active</property>
+      <property>controls/electric/engine/generator</property>
+      <not>
+        <property>sim/model/searchlight/paused</property>
+      </not>
+      <equals>
+       <property>sim/model/searchlight/state</property>
+       <value>2</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>searchlight-cone-large</object-name>
+    <condition>
+      <property>sim/model/ec130/searchlight</property>
+      <property>sim/model/searchlight/active</property>
+      <property>controls/electric/engine/generator</property>
+      <not>
+        <property>sim/model/searchlight/paused</property>
+      </not>
+      <equals>
+       <property>sim/model/searchlight/state</property>
+       <value>3</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>searchlight-cone-xlarge</object-name>
+    <condition>
+      <property>sim/model/ec130/searchlight</property>
+      <property>sim/model/searchlight/active</property>
+      <property>controls/electric/engine/generator</property>
+      <not>
+        <property>sim/model/searchlight/paused</property>
+      </not>
+      <equals>
+       <property>sim/model/searchlight/state</property>
+       <value>4</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!-- visibility of light cone -->
+  <animation>
+    <type>select</type>
+    <object-name>cone</object-name>
+    <condition>
+      <property>sim/model/searchlight/active</property>
+      <property>controls/electric/engine/generator</property>
+      <property>sim/model/searchlight/cone-visibility</property>
+      <not>
+        <property>sim/model/searchlight/paused</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>cone</object-name>
+    <emission>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>1.0</blue>
+    </emission>
+    <transparency>
+     <alpha-prop>sim/model/searchlight/cone-visibility</alpha-prop>
+     <factor>0.03</factor>
+     <offset>0</offset>
+    </transparency>
+  </animation>
+
+  <!-- REMBRANDT -->
+  <!-- select volumes -->
+  <animation>
+    <type>select</type>
+    <object-name>LightVolumeS</object-name>
+    <condition>
+      <property>/sim/rendering/rembrandt/enabled</property>
+    </condition>
+  </animation>
+
+  <!-- REMBRANDT -->
+  <animation>
+    <type>light</type>
+    <light-type>spot</light-type>
+    <name>searchlight</name>
+    <object-name>LightVolumeS</object-name>
+    <condition>
+      <property>/sim/rendering/rembrandt/enabled</property>
+      <property>sim/model/ec130/searchlight</property>
+      <property>sim/model/searchlight/active</property>
+      <property>controls/electric/engine/generator</property>
+      <not>
+        <property>sim/model/searchlight/paused</property>
+      </not>
+    </condition>
+    <position>
+      <x>-0.160 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </position>
+    <direction>
+      <x>-1.0</x>
+      <y> 0.0</y>
+      <z> 0.0</z>
+    </direction>
+    <diffuse>
+      <r>1.0</r>
+      <g>1.0</g>
+      <b>1.0</b>
+      <a>1.0</a>
+    </diffuse>
+    <specular>
+      <r>1.0</r>
+      <g>1.0</g>
+      <b>1.0</b>
+      <a>1.0</a>
+    </specular>
+    <dim-factor>
+      <property>sim/time/sun-angle-rad</property>
+      <interpolation>
+        <entry><ind> 0.00 </ind><dep> 0.25 </dep></entry>
+        <entry><ind> 0.52 </ind><dep> 0.30 </dep></entry>
+        <entry><ind> 1.04 </ind><dep> 0.35 </dep></entry>
+        <entry><ind> 1.30 </ind><dep> 0.45 </dep></entry>
+        <entry><ind> 1.40 </ind><dep> 0.55 </dep></entry>
+        <entry><ind> 1.48 </ind><dep> 0.75 </dep></entry>
+        <entry><ind> 1.57 </ind><dep> 1.00 </dep></entry>
+        <entry><ind> 2.10 </ind><dep> 1.00 </dep></entry>
+        <entry><ind> 2.62 </ind><dep> 1.00 </dep></entry>
+        <entry><ind> 3.14 </ind><dep> 1.00 </dep></entry>
+      </interpolation>
+      <offset>0</offset>
+    </dim-factor>
+    <attenuation>
+		  <c>0.5</c>
+		  <l>0.0002</l>
+		  <q>0.000005</q>
+    </attenuation>
+    <exponent>80</exponent>
+    <near-m>0.0</near-m>
+    <far-m>1000</far-m>
+    <cutoff>40</cutoff>
+  </animation>
+
+</PropertyList>
+

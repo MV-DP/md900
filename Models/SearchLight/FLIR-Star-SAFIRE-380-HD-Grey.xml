@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- McDonnell Douglas MD 902 FLIR Star SAFIRE 380 HD from FLIR.
+ This file is part of FlightGear, the free flight simulator
+ http://www.flightgear.org/
+
+ Copyright (C) 2014 Martien van der Plas, martienvanderplas@hotmail.nl -->
+
+<PropertyList>
+
+  <path>FLIR/Grey/FLIR-Star-SAFIRE-380-HD.ac</path>
+
+  </PropertyList>

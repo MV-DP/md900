@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Eurocopter EC 130 Searchlight
+      a) SX-16 Nightsun from Spectrolab
+      b) A800 Trakkabeam from Trakka Corp.
+ This file is part of FlightGear, the free flight simulator
+ http://www.flightgear.org/
+
+ Copyright (C) 2014 Michael Habarta, mhabarta@freenet.de
+               animations, light effects
+
+           Lightcones are based on the lightcone of the Alphajet
+           done by BARANGER Emmanuel: email: embaranger@free.fr
+           aka helijah in the FG world
+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+-->
+
+<PropertyList>
+
+      <!-- searchlight controls -->
+      <!-- cycle Searchlight focus/distance -->
+      <!-- cycles up/down as with original SX-16 Nightsun control device -->
+      <!-- A800: cycles filters -->
+      <key n="115">
+        <name>s</name>
+        <desc>cycle Search Light distance</desc>
+        <repeatable type="bool">false</repeatable>
+         <binding>
+           <condition>
+             <property>sim/model/searchlight/active</property>
+           </condition>
+           <command>nasal</command>
+           <script>ec130.slight_cycle()</script>
+         </binding>
+      </key>
+
+      <key n="83">
+        <name>S</name>
+        <desc>pause Search Light</desc>
+         <binding>
+           <condition>
+             <property>sim/model/searchlight/active</property>
+           </condition>
+           <command>property-toggle</command>
+           <property>sim/model/searchlight/paused</property>
+         </binding>
+         <binding>
+           <condition>
+             <property>sim/model/searchlight/active</property>
+           </condition>
+           <command>nasal</command>
+           <script>
+             ec130.slight_reset();
+           </script>
+         </binding>
+      </key>
+
+      <key n="115">
+        <mod-alt>
+         <name>Alt-s</name>
+         <desc>toggle/cycle Search Light Filter(s)</desc>
+         <binding>
+           <command>nasal</command>
+           <script>ec130.slight_toggle_cycle_filter();</script>
+         </binding>
+        </mod-alt>
+      </key>
+
+      <key n="115">
+        <mod-alt>
+         <mod-ctrl>
+          <name>AltGr-s</name>
+          <desc>Searchlight Options</desc>
+          <binding>
+           <command>nasal</command>
+           <script>ec130.searchlight_options_dialog.toggle();</script>
+          </binding>
+         </mod-ctrl>
+        </mod-alt>
+      </key>
+
+      <key n="76">
+        <name>L</name>
+        <desc>toggle Search Light</desc>
+        <binding>
+          <condition>
+            <property>controls/electric/engine/generator</property>
+            <or>
+              <property>sim/model/ec130/searchlight</property>
+              <property>sim/model/ec130/searchlight_a800</property>
+            </or>
+          </condition>
+          <command>nasal</command>
+          <script>ec130.slight_toggle_power();</script>
+        </binding>
+      </key>
+
+      <key n="108">
+        <mod-alt>
+          <name>Alt-l</name>
+          <desc>cycle Light cone visibility</desc>
+          <binding>
+           <condition>
+             <property>controls/electric/engine/generator</property>
+             <property>sim/model/searchlight/active</property>
+           </condition>
+           <!-- cone visibility: 0: off, 1: low, 2:medium, 3: high -->
+           <command>nasal</command>
+           <script>ec130.slight_cycle_cone_visibility();</script>
+          </binding>
+        </mod-alt>
+      </key>
+
+      <!-- searchlight movement -->
+      <key n="106">
+       <name>j</name>
+       <desc>rotate Search Light left</desc>
+       <repeatable type="bool">true</repeatable>
+        <binding>
+          <command>nasal</command>
+          <script>
+          <!-- disable pushback script -->
+          </script>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>ec130.slight_rotate(1);</script>
+        </binding>
+      </key>
+
+      <key n="74">
+       <name>J</name>
+       <desc>rotate Search Light right</desc>
+       <repeatable type="bool">true</repeatable>
+        <binding>
+          <command>nasal</command>
+          <script>ec130.slight_rotate(2);</script>
+        </binding>
+      </key>
+
+      <key n="107">
+       <name>k</name>
+       <desc>rotate Search Light down</desc>
+       <repeatable type="bool">true</repeatable>
+        <binding>
+          <command>nasal</command>
+          <script>
+          <!-- disable pushback script -->
+          </script>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>ec130.slight_rotate(3);</script>
+        </binding>
+      </key>
+
+      <key n="75">
+       <name>K</name>
+       <desc>rotate Search Light up</desc>
+       <repeatable type="bool">true</repeatable>
+        <binding>
+          <command>nasal</command>
+          <script>
+          <!-- disable pushback script -->
+          </script>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>ec130.slight_rotate(4);</script>
+        </binding>
+      </key>
+
+      <key n="11">
+       <name>Ctrl-k</name>
+       <desc>reset searchlight</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+          <!-- disable pushback script -->
+          </script>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>ec130.slight_reset()</script>
+        </binding>
+      </key>
+
+</PropertyList>

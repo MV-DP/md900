@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+
+<!-- Searchlight Options Dialog
+ This file is part of FlightGear, the free flight simulator
+ http://www.flightgear.org/
+
+ Copyright (C) 2014 Michael Habarta, mhabarta@freenet.de
+               animations, search light effects
+
+           Lightcones are based on the lightcone of the Alphajet
+           done by BARANGER Emmanuel: email: embaranger@free.fr
+           aka helijah in the FG world
+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+-->
+
+<PropertyList>
+
+  <name>Searchlight-Options</name>
+
+  <layout>vbox</layout>
+	<resizable>false</resizable>
+  <modal>false</modal>
+  <draggable>true</draggable>
+	<default-padding>3</default-padding>
+
+  <nasal>
+    <open>
+
+      <!-- init light cone visible -->
+      var p = getprop("/sim/model/searchlight/cone-visibility");
+
+      setprop("/sim/model/searchlight/cone_flag_0",0);
+      setprop("/sim/model/searchlight/cone_flag_1",0);
+      setprop("/sim/model/searchlight/cone_flag_2",0);
+      setprop("/sim/model/searchlight/cone_flag_3",0);
+
+      if ( p == 0 ) { setprop("/sim/model/searchlight/cone_flag_0",1); }
+      if ( p == 1 ) { setprop("/sim/model/searchlight/cone_flag_1",1); }
+      if ( p == 2 ) { setprop("/sim/model/searchlight/cone_flag_2",1); }
+      if ( p == 3 ) { setprop("/sim/model/searchlight/cone_flag_3",1); }
+
+    </open>
+    <close># just kept for educational purposes :-)</close>
+  </nasal>
+
+
+  <!-- Title with Esc knob for closing -->
+	<group>
+
+    <layout>hbox</layout>
+	  <empty><stretch>1</stretch></empty>
+
+		<text>
+			<label>Searchlight Options (AltGr-s)</label>
+		</text>
+
+		<empty><stretch>true</stretch></empty>
+
+		<button>
+			<legend></legend>
+			<key>Esc</key>
+			<pref-width>16</pref-width>
+			<pref-height>16</pref-height>
+			<binding>
+        <command>nasal</command>
+        <script>ec130.searchlight_options_dialog.toggle()</script>
+			</binding>
+		</button>
+	</group>
+
+	<hrule/>
+
+  <text>
+    <label>  Light-Cone Visibility:   (Alt-L)</label>
+    <halign>left</halign>
+    <enable>
+      <property>controls/electric/engine/generator</property>
+      <property>/sim/model/searchlight/active</property>
+    </enable>
+  </text>
+
+  <group>
+
+    <layout>table</layout>
+    <default-padding>5</default-padding>
+    <halign>left</halign>
+
+      <!-- only to get a gap between left border and checkbox -->
+      <text>
+        <row>0</row>
+        <col>0</col>
+        <label> </label>
+        <halign>left</halign>
+      </text>
+
+      <text>
+        <row>0</row>
+        <col>1</col>
+        <label> </label>
+        <halign>left</halign>
+      </text>
+
+      <radio>
+        <row>0</row>
+        <col>2</col>
+        <halign>left</halign>
+        <label> invisible</label>
+        <property>/sim/model/searchlight/cone_flag_0</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+            setprop("/sim/model/searchlight/cone-visibility",0);
+<!--
+            setprop("/sim/model/searchlight/cone_flag_0",0);
+-->
+            setprop("/sim/model/searchlight/cone_flag_1",0);
+            setprop("/sim/model/searchlight/cone_flag_2",0);
+            setprop("/sim/model/searchlight/cone_flag_3",0);
+          </script>
+        </binding>
+      </radio>
+
+      <radio>
+        <row>0</row>
+        <col>3</col>
+        <halign>left</halign>
+        <label> low</label>
+        <property>/sim/model/searchlight/cone_flag_1</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+            setprop("/sim/model/searchlight/cone-visibility",1);
+            setprop("/sim/model/searchlight/cone_flag_0",0);
+<!--
+            setprop("/sim/model/searchlight/cone_flag_1",0);
+-->
+            setprop("/sim/model/searchlight/cone_flag_2",0);
+            setprop("/sim/model/searchlight/cone_flag_3",0);
+          </script>
+        </binding>
+      </radio>
+
+      <radio>
+        <row>1</row>
+        <col>2</col>
+        <halign>left</halign>
+        <label> medium</label>
+        <property>/sim/model/searchlight/cone_flag_2</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+            setprop("/sim/model/searchlight/cone-visibility",2);
+            setprop("/sim/model/searchlight/cone_flag_0",0);
+            setprop("/sim/model/searchlight/cone_flag_1",0);
+<!--
+            setprop("/sim/model/searchlight/cone_flag_2",0);
+-->
+            setprop("/sim/model/searchlight/cone_flag_3",0);
+          </script>
+        </binding>
+      </radio>
+
+      <radio>
+        <row>1</row>
+        <col>3</col>
+        <halign>left</halign>
+        <label> bright </label>
+        <property>/sim/model/searchlight/cone_flag_3</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+            setprop("/sim/model/searchlight/cone-visibility",3);
+            setprop("/sim/model/searchlight/cone_flag_0",0);
+            setprop("/sim/model/searchlight/cone_flag_1",0);
+            setprop("/sim/model/searchlight/cone_flag_2",0);
+<!--
+            setprop("/sim/model/searchlight/cone_flag_3",0);
+-->
+          </script>
+        </binding>
+      </radio>
+
+  </group>
+
+	<hrule/>
+
+  <group>
+    <layout>hbox</layout>
+		<default-padding>3</default-padding>
+
+    <button>
+      <legend>Close</legend>
+      <equal>true</equal>
+      <key>Esc</key>
+      <default>true</default>
+      <binding>
+        <command>nasal</command>
+        <script>ec130.searchlight_options_dialog.toggle()</script>
+      </binding>
+    </button>
+
+  </group>
+
+</PropertyList>
