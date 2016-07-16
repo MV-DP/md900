@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+
+	<path>kra10a.ac</path>
+
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>RAlt.needle</object-name>
+		<property>/position/altitude-agl-ft</property>
+		<interpolation>
+			<entry>
+				<ind> 0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind> 25</ind>
+				<dep>342.07</dep>
+			</entry>
+			<entry>
+				<ind> 50</ind>
+				<dep>322.3</dep>
+			</entry>
+			<entry>
+				<ind> 100</ind>
+				<dep>282.88</dep>
+			</entry>
+			<entry>
+				<ind> 150</ind>
+				<dep>237</dep>
+			</entry>
+			<entry>
+				<ind> 200</ind>
+				<dep>93.0</dep>
+			</entry>
+			<entry>
+				<ind> 400</ind>
+				<dep>127</dep>
+			</entry>
+			<entry>
+				<ind> 500</ind>
+				<dep>200.0</dep>
+			</entry>
+			<entry>
+				<ind>1000</ind>
+				<dep>180.0</dep>
+			</entry>
+			<entry>
+				<ind>1500</ind>
+				<dep>160.0</dep>
+			</entry>
+			<entry>
+				<ind>2000</ind>
+				<dep>140.0</dep>
+			</entry>
+			<entry>
+				<ind>2500</ind>
+				<dep>120.0</dep>
+			</entry>
+			<entry>
+				<ind>2700</ind>
+				<dep>90.0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>RAlt.Bug</object-name>
+		<property>/instrumentation/radar-altimeter/decision-height</property>
+		<interpolation>
+			<entry>
+				<ind> 0</ind>
+				<dep>359.0</dep>
+			</entry>
+			<entry>
+				<ind> 50</ind>
+				<dep>344.0</dep>
+			</entry>
+			<entry>
+				<ind> 100</ind>
+				<dep>330.0</dep>
+			</entry>
+			<entry>
+				<ind> 200</ind>
+				<dep>298.0</dep>
+			</entry>
+			<entry>
+				<ind> 300</ind>
+				<dep>267.0</dep>
+			</entry>
+			<entry>
+				<ind> 400</ind>
+				<dep>233.0</dep>
+			</entry>
+			<entry>
+				<ind> 500</ind>
+				<dep>200.0</dep>
+			</entry>
+			<entry>
+				<ind>1000</ind>
+				<dep>180.0</dep>
+			</entry>
+			<entry>
+				<ind>1500</ind>
+				<dep>160.0</dep>
+			</entry>
+			<entry>
+				<ind>2000</ind>
+				<dep>140.0</dep>
+			</entry>
+			<entry>
+				<ind>2500</ind>
+				<dep>120.0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+
+
+
+</PropertyList>
