@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+<model>
+ <name>Interior</name>
+ <path>Aircraft/md900/Models/Variants/cabin.ac</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </offsets>
+</model>
+<animation>
+ <type>select</type>
+ <object-name>EMS</object-name>
+ <nopreview/>
+ <condition>
+  <property>sim/model/md900/EMS</property>
+ </condition>
+</animation>
+<animation>
+ <type>select</type>
+ <object-name>VIP</object-name>
+ <object-name>Cupboard</object-name>
+ <nopreview/>
+ <condition>
+  <property>sim/model/md900/VIP</property>
+ </condition>
+</animation>
+ <animation>
+  <type>pick</type>
+  <object-name>LuggageDoor</object-name>
+  <visible>true</visible>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>nasal</command>
+    <script>md900.leftRearDoor.toggle();</script>
+   </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LuggageDoor</object-name>
+  <property>sim/model/md900/door-positions/leftRearDoor/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0.0</dep>
+   </entry>
+   <entry>
+    <ind>0.25</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1</ind>
+    <dep>110.0</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x1-m>1.8500</x1-m>
+   <y1-m>-0.33072</y1-m>
+   <z1-m>0.14145</z1-m>
+   <x2-m>1.63755</x2-m>
+   <y2-m>-0.52781</y2-m>
+   <z2-m>-0.34036</z2-m>
+  </axis>
+ </animation>
+</PropertyList>
