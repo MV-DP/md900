@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>audio-plug.ac</path>
+  
+  <animation>
+    <object-name>audio</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>audio</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/chatter/enabled</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>sim/messages/copilot</property>
+        <value>Chatter on/off</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>audio</object-name>
+    <visible>true</visible>
+    <action>
+      <button>3</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>sim/sound/volume</property>
+        <step>0.025</step>
+        <min>0.0</min>
+        <max>1.0</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>sim/sound/volume</property>
+        <step>-0.025</step>
+        <min>0.0</min>
+        <max>1.0</max>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>
+
