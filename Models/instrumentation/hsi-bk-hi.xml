@@ -1,0 +1,236 @@
+<?xml version="1.0" ?>
+<!--
+    $Id$
+    This is the Bendix/King KI252 HSI 3d instrument.
+    Maintainer: Torsten Dreyer
+    
+    $Log$
+    Revision 1.1  2007/06/03 14:58:44  mfranz
+    Heiko SCHULZ: EC135 v0.2
+
+    Revision 1.2  2006-11-23 14:27:03  mfranz
+    Torsten DREYER:
+
+    """
+    - Added instruments lights for night flights
+    - Addes flashing strobe effect in clouds at night
+    - OBS knob on vor2 clickable
+    - subscale knob on altimeter clickable
+    - changes on aircraft 3d-model
+    - Fixed bug in HSI, wrong deflection of glideslope indicator and
+      transparency issue
+    - Added Roberto Inzerillo's nice nose gear and animations, new main gear
+    """
+
+    Revision 1.1  2006-06-01 12:58:33  mfranz
+    Torsten Dreyer: version 0.3 of the PA34-200T Seneca II (2006.05.30)
+
+-->
+<PropertyList>
+	<path>hsi-bk-hi.ac</path>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>hsi</object-name>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>hsi.Rotary</object-name>
+		<object-name>hsi.CompassRose</object-name>
+		<object-name>hsi.HeadingBug</object-name>
+		<object-name>hsi.NAVFlag</object-name>
+		<object-name>hsi.HDGFlag</object-name>
+		<emission>
+			<red-prop>/sim/model/instrument-lighting/emission/red</red-prop>
+			<green-prop>/sim/model/instrument-lighting/emission/green</green-prop>
+			<blue-prop>/sim/model/instrument-lighting/emission/blue</blue-prop>
+			<factor-prop>/controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>hsi.OuterMask</object-name>
+		<object-name>hsi.Glass</object-name>
+		<emission>
+			<red-prop>/sim/model/instrument-lighting/emission/red</red-prop>
+			<green-prop>/sim/model/instrument-lighting/emission/green</green-prop>
+			<blue-prop>/sim/model/instrument-lighting/emission/blue</blue-prop>
+			<factor-prop>/controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>hsi.CompassRose</object-name>
+		<property>/instrumentation/heading-indicator/indicated-heading-deg</property>
+		<factor>1.0</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>-0.001</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>hsi.HeadingBug</object-name>
+		<property>/instrumentation/hsi/heading-bug-rotation-deg</property>
+		<factor>1.0</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>hsi.Rotary</object-name>
+		<object-name>hsi.cursor</object-name>
+		<property>/instrumentation/hsi/cursor-rotation-deg</property>
+		<factor>1.0</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>hsi.HeadingSelector</object-name>
+		<property>/autopilot/settings/heading-bug-deg</property>
+		<factor>4.0</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.0331529</y-m>
+			<z-m>-0.0242478</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>hsi.CursorSelector</object-name>
+		<property>/instrumentation/hsi/cursor-rotation-deg</property>
+		<factor>-4.0</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0331529</y-m>
+			<z-m>-0.0242478</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>hsi.cursor.deflection</object-name>
+		<property>/instrumentation/nav[0]/heading-needle-deflection</property>
+		<factor>0.00152675</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>hsi.gs</object-name>
+		<property>/instrumentation/nav[0]/gs-needle-deflection</property>
+		<!--
+        <factor>0.022420</factor>
+        -->
+		<factor>0.004484</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>hsi.gs</object-name>
+		<condition>
+			<property>/instrumentation/nav[0]/has-gs</property>
+			<greater-than>
+				<property>/instrumentation/nav[0]/gs-needle-deflection</property>
+				<value>-3.6</value>
+			</greater-than>
+			<less-than>
+				<property>/instrumentation/nav[0]/gs-needle-deflection</property>
+				<value>3.6</value>
+			</less-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>hsi.NAVFlag</object-name>
+		<condition>
+			<not>
+				<property>/instrumentation/nav[0]/in-range</property>
+			</not>
+		</condition>
+	</animation>
+
+	<!-- fixme: whould be nicer to have a rotation bound to spin -->
+	<animation>
+		<type>select</type>
+		<object-name>hsi.HDGFlag</object-name>
+		<condition>
+			<or>
+				<not>
+					<property>/instrumentation/heading-indicator/serviceable</property>
+				</not>
+				<less-than>
+					<property>/instrumentation/heading-indicator/spin</property>
+					<value type="double">0.9</value>
+				</less-than>
+			</or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>hsi.TOFlag</object-name>
+		<condition>
+			<property>/instrumentation/nav[0]/to-flag</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>hsi.FROMFlag</object-name>
+		<condition>
+			<property>/instrumentation/nav[0]/from-flag</property>
+		</condition>
+	</animation>
+
+</PropertyList>

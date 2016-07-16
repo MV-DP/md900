@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<adf>
+		<name>adf</name>
+		<number>0</number>
+	</adf>
+
+	<adf>
+		<name>adf-radio</name>
+		<number>0</number>
+	</adf>
+
+	<airspeed-indicator>
+		<name>airspeed-indicator</name>
+		<number>0</number>
+		<pitot-port>/systems/pitot</pitot-port>
+		<static-port>/systems/static</static-port>
+	</airspeed-indicator>
+
+	<altimeter>
+		<name>altimeter</name>
+		<number>0</number>
+		<static-port>/systems/static</static-port>
+	</altimeter>
+
+	<attitude-indicator>
+		<name>attitude-indicator</name>
+		<number>0</number>
+		<vacuum-system>/systems/vacuum</vacuum-system>
+	</attitude-indicator>
+
+	<clock>
+		<name>clock</name>
+		<number>0</number>
+	</clock>
+
+	<dme>
+		<name>dme</name>
+		<number>0</number>
+	</dme>
+
+	<encoder>
+		<name>encoder</name>
+		<number>0</number>
+		<static-port>/systems/static</static-port>
+	</encoder>
+
+	<gsdi>
+		<name>gsdi</name>
+		<number>0</number>
+	</gsdi>
+
+	<marker-beacon>
+		<name>marker-beacon</name>
+		<number>0</number>
+	</marker-beacon>
+
+	<heading-indicator>
+		<name>heading-indicator</name>
+		<number>0</number>
+		<vacuum-system>/systems/vacuum</vacuum-system>
+	</heading-indicator>
+
+	<KT-70>
+		<name>kt-70</name>
+		<number>0</number>
+	</KT-70>
+
+	<magnetic-compass>
+		<name>magnetic-compass</name>
+		<number>0</number>
+	</magnetic-compass>
+
+	<nav-radio>
+		<name>nav</name>
+		<number>0</number>
+	</nav-radio>
+
+	<nav-radio>
+		<name>nav</name>
+		<number>1</number>
+	</nav-radio>
+
+	<slip-skid-ball>
+		<name>slip-skid-ball</name>
+		<number>0</number>
+	</slip-skid-ball>
+
+	<transponder>
+		<name>transponder</name>
+		<number>0</number>
+		<encoder>/instrumentation/encoder</encoder>
+	</transponder>
+
+	<turn-indicator>
+		<name>turn-indicator</name>
+		<number>0</number>
+	</turn-indicator>
+
+	<vertical-speed-indicator>
+		<name>vertical-speed-indicator</name>
+		<number>0</number>
+		<static-port>/systems/static</static-port>
+	</vertical-speed-indicator>
+
+	<gps>
+		<name>gps</name>
+		<number>0</number>
+	</gps>
+
+	<tacan>
+		<name>tacan</name>
+		<number>0</number>
+	</tacan> <radar> <name>radar</name> <number>0</number> </radar> 
+</PropertyList>
