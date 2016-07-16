@@ -1,0 +1,400 @@
+<!--MD 902 Exporer
+  Max  weight: 2835kg
+  Min weight: 1500kg (3307 lbs)
+  Empty weight: 3268 lbs (baseline: 3207lbs)
+  
+  Max Range: 450 nm  
+
+  Length: 12.37m
+  width: 1.62m
+  width with hstab: 2.84m
+
+  Main Rotor diameter: 10.3m
+  Type: bearingless main rotor, very similar like  EC135
+  Number of Blades: 5
+  Rotor speed: 392rpm
+  airfoil:  HH-10    non-symmetrical -> Lift/drag curve needed, maybe per x-foil using this source:
+http://www.sme.org/uploadedFiles/Events/Webinars/5-15-08.pdf  
+
+   rellenflaphinge guessed on: http://www.uni-stuttgart.de/hkom/publikationen/themenheft/03/bansemir.pdf
+ 
+
+ fan diameter: 0.56m
+  Type: NOTAR(TM)
+  Number of Blades: 13
+  Rotor speed: 5412rpm
+ 
+
+
+  2 Pratt & Whitney PW 207
+  max power: 820kw, 
+  max continous: 746 kw,
+
+  -->
+
+<airplane mass="3375">
+
+<approach speed="47" aoa="16">
+		<control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
+</approach>
+
+<cruise speed="137" alt="0">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
+</cruise>
+
+
+
+<rotor name="main" x="-0.0" y="0.0" z="2.303" 
+  nx="0.087" ny="0" nz="1." fx="1" fy="0" fz="0" ccw="1"
+  maxcollective="17.0" mincollective="0.2"
+  mincyclicele="-12.5" maxcyclicele="8"
+  mincyclicail="-7" maxcyclicail="8"
+  diameter="10.3" 
+  numblades="5" 
+  weightperblade="84.22" 
+  relbladecenter="0.5"
+  dynamic="1.0" rpm="392" phi0="45" 
+  rellenflaphinge="0.09" delta3="0"
+  delta=".32"
+  pitch-a="10"
+  pitch-b="15"
+  flapmin="-13"
+  flapmax="13"
+  flap0="-5"
+  flap0factor="0"
+  notorque="0"
+  dragfactor="0.30"
+	  translift-ve="20"
+	  translift-maxfactor="1.55"
+  ground-effect-constant="0.1"
+  twist="-10.0"
+	  taper="1"
+  chord="0.25"
+  number-of-segments="10"
+  number-of-parts="10"
+  rel-len-where-incidence-is-measured="0.7"
+  rel-len-blade-start="0.29"
+
+  airfoil-incidence-no-lift="-0.1"
+  airfoil-lift-coefficient="3.9"
+  airfoil-drag-coefficient0="0.0075"
+  airfoil-drag-coefficient1="0.04"
+  incidence-stall-zero-speed="16"
+  incidence-stall-half-sonic-speed="15.5"
+  lift-factor-stall="0.18"
+  stall-change-over="5.5"
+  drag-factor-stall="2.0"
+   cyclic-factor="0.8"
+  rotor-correction-factor="0.8"
+  downwashfactor="0.75"
+  >
+  <!--lst values: 1.35;0.1;-0.3;3.80;0.0074;0.04; to-do: play with lift-coeff and translift-factor-->
+   <control-input axis="/controls/flight/aileron-trim" control="CYCLICAIL"/>
+  <control-input axis="/controls/flight/fcs/roll" control="CYCLICAIL"
+					   src0="-1.0" src1="1.0"
+					   dst0="-1.0" dst1="1.0"/>
+  <control-input axis="/controls/flight/elevator-trim" control="CYCLICELE"/>
+  <control-input axis="/controls/flight/fcs/pitch" control="CYCLICELE"
+					   src0="-1.0" src1="1.0"
+					   dst0="-1.0" dst1="1.0"/>
+		<control-input axis="/controls/engines/engine[0]/throttle" control="COLLECTIVE"
+					   src0="0.0" src1="1.0"
+                 dst0="1.0" dst1="-1"/>
+</rotor>
+
+
+<!--NOTAR (R) fan - producing no lift, but hopefully some little expected torque
+<rotor name="tail" x="-1.752" y="0.0" z="0.793"
+nx="-1.0" ny="0" nz="-0.50" fx="1" fy="0" fz="0" ccw="1"
+	  maxcollective="34.2" mincollective="-16.8"
+	  diameter="0.56" numblades="13" weightperblade="0.64" relbladecenter="0.5"
+	  dynamic="1.4" rpm="5412" rellenflaphinge="0.35" delta3="0" translift="0" delta="0.5" twist="-7.0" 
+	  pitch-a="10"
+	  pitch-b="15"
+	  flapmin="-2.0"
+          flapmax="2.0"
+          flap0="0"
+	  airfoil-lift-coefficient="0.01"
+	  airfoil-drag-coefficient0="0.0001"
+	  airfoil-drag-coefficient1="0.01"
+	  notorque="0"
+	  taper="1"
+	  chord="0.1"
+	  number-of-segments="5"
+	  number-of-parts="4"
+	  rel-len-blade-start="0.35"
+	    airfoil-incidence-no-lift="-0.3"
+	  incidence-stall-zero-speed="34"
+	  incidence-stall-half-sonic-speed="33"
+	  lift-factor-stall="0.18"
+	  stall-change-over="5.5"
+	  drag-factor-stall="8"
+	  rotor-correction-factor="0.8"
+	  downwashfactor="0.5"
+>
+ <control-input axis="/controls/flight/fcs/yaw" control="COLLECTIVE" invert="true"
+					   src0="-1.0" src1="1.0"
+					   dst0="-1.0" dst1="1.0"/>
+		<control-input axis="/controls/flight/fcs/tail-rotor/throttle" control="COLLECTIVE" invert="true"
+					   src0="0.0" src1="1.0"
+					   dst0="0.0" dst1="1.0"/>
+</rotor>-->
+
+
+<rotorgear
+  max-power-engine="820"
+	  max-power-rotor-brake="100"
+	  rotorgear-friction="10.4"
+	  engine-prop-factor="0.005"
+  engine-accel-limit="100"
+  yasimdragfactor="45.5"
+  yasimliftfactor="42"
+>
+		<control-input axis="/controls/engines/engine[0]/magnetos" control="ROTORGEARENGINEON"/>
+		<control-input axis="/controls/rotor/brake" control="ROTORBRAKE"
+					   src0="0.0" src1="1.0"
+					   dst0="0.0" dst1="1.0"/>
+  <control-input axis="/controls/rotor/reltarget" control="ROTORRELTARGET"
+                 src0="0.0" src1="2.0"
+                 dst0="0.0" dst1="2.0"/>
+  <control-input axis="/controls/rotor/maxreltorque" control="ROTORENGINEMAXRELTORQUE"
+                 src0="0.0" src1="2.0"
+                 dst0="0.0" dst1="2.0"/>
+</rotorgear>
+
+
+<cockpit x="-1.88" y=".33" z="0.6"/>
+
+<fuselage ax="3.287" ay="0" az="0.054" 
+bx="1.447" by="0" bz="0.313" 
+cx="3.0"  
+          width="1.82" taper="0.01" midpoint="1.0" idrag="0"/>
+
+<fuselage ax="1.447" ay="0" az="0.313" 
+bx="-0.881" by="0" bz=".313" cz="0.5" cx="2.5" 
+          width="1.82" taper="1.0" midpoint="0.5" idrag="0.0"/>
+	  
+<fuselage ax="-0.881" ay="0" az="0.313" 
+bx="-2.121" by="0" bz=".662" cz="0.5" cx="2.5" 
+          width="1.82" taper="0.3" midpoint="0.0" idrag="0.0"/>
+	  
+<fuselage ax="1.459" ay="0" az="0.931" 
+bx="-1.712" by="0" bz="1.249" cz="0.5" cx="1.0" 
+          width="1.5" taper="0.4" midpoint="0.6" idrag="0.0"/>
+
+	<!--NOTAR Tailboom-->
+<fuselage ax="-2.121" ay="0" az="0.662" 
+bx="-6.943" by="0" bz="0.519" cz="0.5" 
+          width="0.6" taper="1.0" midpoint="0.0" idrag="0.0"/>
+	  
+	
+
+
+
+<vstab x="-5.18" y="1.382" z=".805" 
+taper="0.8" 
+length="-.70" 
+chord=".70" 
+dihedral="100"
+incidence="5"
+sweep="30">
+<stall aoa="24" width="10" peak="1.5"/>
+</vstab>
+
+<vstab x="-5.18" y="-1.382" z=".805" 
+taper="0.8" 
+length="-.70" 
+chord=".70" 
+dihedral="80"
+incidence="-5"
+sweep="30">
+<stall aoa="24" width="10" peak="1.5"/>
+</vstab>
+
+<!--vstabs with rudder-->
+<vstab x="-5.18" y="1.382" z=".805" 
+taper="0.75" 
+length=".90" 
+chord=".70" 
+dihedral="100"
+incidence="5"
+sweep="20">
+         <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
+
+         <control-input axis="/controls/flight/fcs/yaw" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/fcs/tail-rotor/throttle" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+
+
+<stall aoa="24" width="10" peak="1.5"/>
+ </vstab>
+
+<vstab x="-5.18" y="-1.382" z=".805" 
+taper="0.758" 
+length=".970" 
+chord=".70" 
+dihedral="80"
+incidence="5"
+sweep="20">
+         <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
+
+         <control-input axis="/controls/flight/fcs/yaw" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/fcs/tail-rotor/throttle" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+<stall aoa="24" width="10" peak="1.5"/>
+</vstab>
+
+<!--changed incidence to -5, former -7-->
+<hstab x="-5.225" y="0.00" z="0.934" taper="1.0" 
+dihedral="0"
+length="1.40" 
+chord="0.5" 
+sweep="-2"
+incidence="-7">
+  <stall aoa="27" width="0" peak="1.5"/>
+</hstab>
+
+<!-- left lowskid -->
+<gear x="1.5" y="+1.190" z="-1.230" skid="1" compression="0.15" spring="1.2"   sfric="0.7" dfric="0.9"/>
+<gear x="-0.943" y="+1.190" z="-1.230" skid="1" compression="0.15" spring="1.2" sfric="0.7" dfric="0.9"/>
+
+<!-- right lowskid -->
+<gear x="1.50" y="-1.19" z="-1.230" skid="1" compression="0.15" spring="1.2"    sfric="0.7" dfric="0.9"/>
+<gear x="-0.943" y="-1.19" z="-1.230" skid="1" compression="0.15" spring="1.2"   sfric="0.7" dfric="0.9"/>
+
+
+<!-- left lowskid with floats-
+<gear x="-1.09" y="+1.00" z="-1.348" skid="1" compression="0.1" spring="1.2"    sfric="0.9" dfric="0.9"/>
+<gear x="-3.792" y="+1.00" z="-1.201" skid="1" compression="0.1" spring="1.2"   sfric="0.9" dfric="0.9"/>
+<gear x="-5.186" y="+1.00" z="-0.862" skid="1" compression="0.1" spring="1.2"   sfric="0.9" dfric="0.9"/>
+<control-input axis="/sim/model/ec135/longskid_floats" control="EXTEND"/>
+<control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+<control-speed control="EXTEND" transition-time="0.1"/>
+
+
+
+<gear x="-1.09" y="-1.00" z="-1.348" skid="1" compression="0.1" spring="1.2"   sfric="0.9" dfric="0.9"/>
+<gear x="-3.792" y="-1.00" z="-1.201" skid="1" compression="0.1" spring="1.2"  sfric="0.9" dfric="0.9"/>
+<gear x="-5.186" y="-1.00" z="-0.862" skid="1" compression="0.1" spring="1.2"   sfric="0.9" dfric="0.9"/>
+<control-input axis="/sim/model/ec135/longskid_floats" control="EXTEND"/>
+<control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
+<control-speed control="EXTEND" transition-time="0.1"/>
+-->
+
+<!-- tail skid -->
+<gear x="-5.324" y="+0.00" z="-0.250" skid="1" compression="0.01" spring="0.1" sfric="1" dfric="1"/>
+
+<!-- additional point for fuselage -->
+<gear x="2.713" y="+0.00" z="-0.454" skid="1" compression="0.01" spring="0.1" sfric="1" dfric="1"/>
+
+<!-- Floats -->
+<!--left float-->
+
+<gear z="-0.92335" y="+1.18666" x="+1.50569" dfric="0.7" sfric="0.8" spring="1" compression="0.2" spring-factor-not-planing="0.7" speed-planing="25" reduce-friction-by-extension="1.0" ignored-by-solver="1" on-solid="0" on-water="1">
+<control-input axis="/controls/gear/floats-inflat" control="EXTEND"/>
+<control-output control="EXTEND" prop="/gear/gear[5]/position-norm"/>
+<control-speed control="EXTEND" transition-time="0.25"/>
+</gear>
+
+<gear z="-1.05305" y="+1.19613" x="-0.70582" dfric="0.7" sfric="0.8" spring="1" compression="0.2" spring-factor-not-planing="0.7" speed-planing="25" reduce-friction-by-extension="1.0" ignored-by-solver="1" on-solid="0" on-water="1">
+<control-input axis="/controls/gear/floats-inflat" control="EXTEND"/>
+<control-output control="EXTEND" prop="/gear/gear[6]/position-norm"/>
+<control-speed control="EXTEND" transition-time="0.25"/>
+</gear>
+
+<!--right float-->
+
+<gear z="-0.92335" y="-1.22078" x="1.50569" dfric="0.7" sfric="0.8" spring="1" compression="0.2" spring-factor-not-planing="0.7" speed-planing="25" reduce-friction-by-extension="1.0" ignored-by-solver="1" on-solid="0" on-water="1">
+<control-input axis="/controls/gear/floats-inflat" control="EXTEND"/>
+<control-output control="EXTEND" prop="/gear/gear[7]/position-norm"/>
+<control-speed control="EXTEND" transition-time="0.25"/>
+</gear>
+
+<gear z="-1.05305" y="-1.21176" x="-0.70582" dfric="0.7" sfric="0.8" spring="1" compression="0.2" spring-factor-not-planing="0.7" speed-planing="25" reduce-friction-by-extension="1.0" ignored-by-solver="1" on-solid="0" on-water="1">
+<control-input axis="/controls/gear/floats-inflat" control="EXTEND"/>
+<control-output control="EXTEND" prop="/gear/gear[8]/position-norm"/>
+<control-speed control="EXTEND" transition-time="0.25"/>
+</gear>
+
+
+
+
+<tank x="-0.024" y="0" z="-.526" capacity="1046"/> <!-- main:   474.5kg -->
+<tank x="-0.024" y="0" z="-.5265" capacity="98.12257"/> <!-- supply: 44.5kg (usable?) -->
+<tank x="-0.024" y="0" z="-.526" capacity="108.045"/> --><!-- supply: 49.0kg (usable?) -->
+
+
+
+<ballast x="-0.65" y="+0.0" z="0.018" mass="618"/>
+<ballast x="-1.05" y="+0.0" z="0.318" mass="309"/>
+
+<ballast x=" -0.05" y="-2.37" z="0.718" mass="154"/>
+<ballast x="-0.05" y="+2.37" z="0.718" mass="154"/>
+
+<ballast x="-0.15" y="0" z="1.295" mass="206"/>
+<ballast x="-0.15" y="0" z="-1.612" mass="206"/>
+
+<ballast x="2.95" y="+0.0" z="-0.942" mass="826"/>
+
+<ballast x="4.15" y="0" z="0.498" mass="-187"/>
+<ballast x="0.0" y="0" z="0.498" mass="-187"/>
+
+<weight x="1.536" y="-.43"  z="0.205" mass-prop="/sim/weight[0]/weight-lb"/>	<!-- pilot -->
+<weight x="1.536" y=".43" z="0.205" mass-prop="/sim/weight[1]/weight-lb"/>	<!-- co-pilot -->
+<weight x="0.816" y="-.43"  z="0.182" mass-prop="/sim/weight[2]/weight-lb"/>	<!-- right passenger -->
+<weight x="-0.433" y="0"    z="0.218" mass-prop="/sim/weight[3]/weight-lb"/>	<!-- middle passenger -->
+<weight x="0.816" y=".43" z="0.182" mass-prop="/sim/weight[4]/weight-lb"/>	<!-- left passenger -->
+<weight x="-0.433" y="0.43"    z="0.2185" mass-prop="/sim/weight[5]/weight-lb"/>	<!-- rear left passenger-->
+<weight x="-0.433" y="-0.43"    z="0.2185" mass-prop="/sim/weight[6]/weight-lb"/>	<!-- rear right passenger-->
+<weight x="-1.244" y="-0.43"    z="0.004" mass-prop="/sim/weight[7]/weight-lb"/>	<!-- rear right passenger-->
+
+<!--NOTAR Thrust>-->
+<thruster x="-6.544" y="0.0" z="0.516" vx="0" vy="1" vz="-0.05" thrust="500">
+  <control-input axis="/controls/flight/fcs/tail-rotor/throttle" control="THROTTLE"
+           src0="0" src1="1" dst0="0" dst1="1"/>
+</thruster>
+
+<thruster x="-6.544" y="0.0" z="0.516" vx="0" vy="1" vz="-0.05" thrust="500">
+  <control-input axis="/controls/flight/fcs/yaw" control="THROTTLE"
+           src0="0" src1="1" dst0="0" dst1="1"/>
+</thruster>
+
+<!-- -->
+
+<thruster x="-6.544" y="0.0" z="0.516" vx="0" vy="-1" vz="-0.05" thrust="400">
+ <control-input axis="/controls/flight/fcs/tail-rotor/throttle" control="THROTTLE"
+           src0="-1" src1="0" dst0="1.0" dst1="0"/>
+</thruster>
+
+	   
+<thruster x="-6.544" y="0.0" z="0.516" vx="0" vy="-1" vz="-0.05" thrust="400">
+ <control-input axis="/controls/flight/fcs/yaw" control="THROTTLE"
+           src0="-1" src1="0" dst0="1.0" dst1="0"/>
+</thruster>
+
+<!--tailboom force due to Coanda effect:   <control-input axis="/rotors/main/coanda" src0="0" src1="1" dst0="-1" dst1="0" control="THROTTLE"/>-->
+<thruster x="-4.255" y="0.0" z="0.604" vx="0" vy="1" vz="-0.05" thrust="800">
+<control-input axis="/controls/engines/engine[0]/throttle" src0="0" src1="1" dst0="-1" dst1="0" control="THROTTLE"/>
+ </thruster>
+
+
+
+<thruster x="-0" y="0.0" z="2.3" vx="1" vy="0" vz="0" thrust="1500">
+  <control-input axis="/rotors/main/vibration/longitudinal" src0="-1" src1="1" dst0="-1" dst1="1" control="THROTTLE"/>
+</thruster>
+
+<thruster x="-0" y="0.0" z="2.3" vx="0" vy="1" vz="0" thrust="1500">
+  <control-input axis="/rotors/main/vibration/lateral" src0="-1" src1="1" dst0="-1" dst1="1" control="THROTTLE"/>
+</thruster>
+
+<!-- residual thrust a 72 pounds(calculated from an example: http://www.pbsvb.com/turboprop-engine-tp-100-and-turboshaft-engine-ts-100) maybe much less in reality for PW206
+<thruster x="-2.023" y="0.6" z="1.186" vx="-1" vy="0" vz="0" thrust="72">
+  <control-input axis="/engines/engine[0]/residualthrust"  src0="0" src1="1" dst0="0" dst1="-1" control="THROTTLE"/>
+</thruster>
+<thruster x="-2.023" y="-0.6" z="1.186" vx="-1" vy="0" vz="0" thrust="72">
+  <control-input axis="/engines/engine[1]/residualthrust"  src0="0" src1="1" dst0="0" dst1="-1" control="THROTTLE"/>
+</thruster>-->
+
+</airplane>

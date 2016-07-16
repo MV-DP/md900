@@ -1,0 +1,518 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+MD-900 simulation config.
+
+************************************************************************
+-->
+
+<PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
+	<sim>
+		<description>McDonnell Douglas MD 902 Explorer</description>
+		<author>Martien van der Plas, Marco F.(3d model), Heiko Schulz (FDM)</author>
+		<status>alpha</status>
+		<rating>
+                    <FDM type="int">1</FDM>
+                    <systems type="int">1</systems>
+                     <cockpit type="int">3</cockpit>
+                    <model type="int">3</model>
+                    </rating>
+		<license>GNU GPL</license>
+		<aircraft-version>0.1</aircraft-version>
+
+		<flight-model>yasim</flight-model>
+		<aero>md902</aero>
+		<fuel-fraction>0.8</fuel-fraction>
+
+
+		<sound>
+			<path>Aircraft/md900/Sounds/sound.xml</path>
+		</sound>
+
+		<startup>
+			<splash-texture>Aircraft/md900/MD-902-Splash.png</splash-texture>
+		</startup>
+
+                <gui>
+                 <style>
+                  <colors>
+                   <splash-font>
+                    <red>0.25</red>
+                    <green>0.28</green>
+                    <blue>0.31</blue>
+                   </splash-font>
+                   <splash-screen>
+                    <red>0.363</red>
+                    <green>0.476</green>
+                    <blue>0.671</blue>
+                   </splash-screen>
+                  </colors>
+                 </style>
+                </gui>
+
+		<instrumentation>
+			<path>Aircraft/md900/Models/instrumentation/instrumentation.xml</path>
+		</instrumentation>
+
+
+		<model>
+			<path archive="y">Aircraft/md900/Models/md902.xml</path>
+				<md900>
+				<state type="int">0</state>
+				<rotor-step-deg type="float">-1.0</rotor-step-deg>
+				<doors>
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">pilot's door</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">copilot's door</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">right backdoor</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">left backdoor</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">right reardoor</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">left reardoor</name>
+					</door>
+				</doors>
+				
+			</md900>
+		</model>
+		
+
+
+
+		<!--view-->
+		<view n="0">
+			<name>Cockpit</name>
+			<!-- type>lookfrom</type -->
+                  <internal archive="y">true</internal> 
+			<!-- internal type="bool">true</internal -->
+			<config>
+                    <x-offset-m type="double">0.445</x-offset-m><!--left-->
+		        <y-offset-m type="double">0.719</y-offset-m><!--up-->
+			  <z-offset-m type="double">-1.70</z-offset-m><!--back-->
+			  <pitch-offset-deg>-10</pitch-offset-deg>
+			  <default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+              	<limits>
+		      <enabled type="bool">true</enabled>
+		      </limits>
+			</config>
+		</view>
+
+		<view n="1">
+			<config>
+				<target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="2">
+			<config>
+				<target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="3">
+			<config>
+				<target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="4">
+			<config>
+				<target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="5">
+			<config>
+				<target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="6">
+			<config>
+				<target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+			</config>
+		</view>
+
+                <view n="500">
+                 <name>Passenger</name>
+                 <type>LookAt</type>
+                 <internal archive="y">true</internal>
+                 <config>
+                  <from-model type="bool">true</from-model>
+                  <from-model-idx type="int">0</from-model-idx>
+                  <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+                  <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+                  <!-- parallel to the panel -->
+                  <x-offset-m archive="y"> 0.00 </x-offset-m>
+                  <!-- Left/Right -->
+                  <y-offset-m archive="y"> 0.59524 </y-offset-m>
+                  <!-- Up/Down -->
+                  <z-offset-m archive="y"> 0.46286 </z-offset-m>
+                  <!-- Fdw/Back -->
+                 </config>
+                </view>
+                <view n="600">
+                 <name>Passenger1</name>
+                 <type>LookAt</type>
+                 <internal archive="y">true</internal>
+                 <config>
+                  <from-model type="bool">true</from-model>
+                  <from-model-idx type="int">0</from-model-idx>
+                  <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+                  <heading-offset-deg type="double"> 180 </heading-offset-deg>
+                  <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+                  <!-- parallel to the panel -->
+                  <x-offset-m archive="y"> 0.50339 </x-offset-m>
+                  <!-- Left/Right -->
+                  <y-offset-m archive="y"> 0.88689 </y-offset-m>
+                  <!-- Up/Down -->
+                  <z-offset-m archive="y"> -0.96448 </z-offset-m>
+                  <!-- Fdw/Back -->
+                 </config>
+                </view>
+
+
+		<weight n="0">
+			<name>Pilot</name>
+			<weight-lb>180</weight-lb>
+			<max-lb>300</max-lb>
+		</weight>
+
+		<weight n="1">
+			<name>Co-Pilot</name>
+			<weight-lb>180</weight-lb>
+			<max-lb>300</max-lb>
+		</weight>
+		
+		<weight n="2">
+			<name>right passenger</name>
+			<weight-lb>0</weight-lb>
+			<max-lb>300</max-lb>
+		</weight>
+
+				
+		<weight n="3">
+			<name>middle passenger</name>
+			<weight-lb>0</weight-lb>
+			<max-lb>300</max-lb>
+		</weight>
+
+		<weight n="4">
+			<name> left passenger</name>
+			<weight-lb>0</weight-lb>
+			<max-lb>300</max-lb>
+		</weight>
+		
+		<weight n="5">
+			<name>rear left passenger</name>
+			<weight-lb>0</weight-lb>
+			<max-lb>300</max-lb>
+		</weight>
+		
+		<weight n="6">
+			<name>rear right passenger</name>
+			<weight-lb>0</weight-lb>
+			<max-lb>300</max-lb>
+		</weight>
+		
+		<weight n="7">
+			<name>Cargo</name>
+			<weight-lb>0</weight-lb>
+			<max-lb>500</max-lb>
+		</weight>
+
+                <multiplay>
+                 <generic>
+                  <int n="0" alias="/systems/electrical/outputs/beacon"/>
+                  <int n="1" alias="/systems/electrical/outputs/landing-light"/>
+                  <int n="2" alias="/systems/electrical/outputs/nav-lights"/>
+                  <!-- floats -->
+                  <float n="0" alias="/gear/gear[6]/position-norm"/>
+                  <string alias="/sim/multiplay/callsign"/>
+                 </generic>
+                </multiplay>
+		
+	
+		<menubar>
+			<default>
+				 <menu n="10">
+      <label>MD-902</label>
+      <enabled type="bool">true</enabled>
+      <item>
+       <label>Autostart</label>
+       <binding>
+        <command>nasal</command>
+        <script>md900.startup()</script>
+       </binding>
+      </item>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+       <label>Inflate/Repack Emerg. Floats</label>
+       <key>Alt-f</key>
+       <binding>
+        <command>nasal</command>
+        <script> if ( getprop("/sim/model/md900/emergencyfloats") ) { if ( getprop("/controls/gear/floats-inflat") ) { if ( getprop("gear/gear[0]/wow") or getprop("gear/gear[1]/wow") or getprop("gear/gear[2]/wow") or getprop("gear/gear[3]/wow") ) { setprop("/controls/gear/floats-inflat",0); setprop("/controls/gear/floats-armed",0); } else { gui.popupTip("Repack only possible on ground",1); } } else { if ( getprop("/controls/gear/floats-armed") ) { setprop("/controls/gear/floats-inflat",1); } else { gui.popupTip("Floats are not armed",1); } } } </script>
+       </binding>
+      </item>
+  	</menu>
+	</default>
+	</menubar>
+	</sim>
+
+	<consumables>
+		<fuel>
+			<tank>
+				<name>Main</name>
+				<selected type="bool" write="n">1</selected>
+				<density-ppg type="double" write="n">6.682</density-ppg>
+			</tank>
+
+			<tank>
+				<name>Supply</name>
+				<selected type="bool" write="n">1</selected>
+				<density-ppg type="double" write="n">6.682</density-ppg>
+			</tank>
+			
+			<tank>
+				<name>Supply2</name>
+				<selected type="bool" write="n">1</selected>
+				<density-ppg type="double" write="n">6.682</density-ppg>
+			</tank>
+		</fuel>
+	</consumables>
+
+	<controls>
+
+               <gear>
+                        <floats-inflat type="bool">false</floats-inflat>
+                        <floats-armed type="bool">false</floats-armed>
+                        <floats-deflate type="bool">false</floats-deflate>
+                </gear>
+
+		<rotor>
+			<reltarget type="double">0</reltarget>
+			<maxreltorque type="double">0</maxreltorque>
+		</rotor>
+		
+	<engines>
+			<engine n="0">
+				<magnetos>1</magnetos>
+				<propeller-pitch alias="/controls/engines/power-trim"/>
+				<mixture alias="/controls/engines/power-balance"/>
+			</engine>
+			<engine n="1">
+				<magnetos>1</magnetos>
+				<propeller-pitch alias="/controls/engines/power-trim"/>
+				<mixture alias="/controls/engines/power-balance"/>
+				<throttle alias="/controls/engines/engine[0]/throttle"/>
+			</engine>
+	</engines>
+
+
+		<lighting>
+			<strobe type="bool">true</strobe>
+			<beacon type="bool">true</beacon>
+			<nav-lights type="bool">true</nav-lights>
+		</lighting>
+	</controls>
+
+	<instrumentation>
+		<gsdi>
+			<serviceable type="bool">true</serviceable>
+		</gsdi>
+		<hsi>
+			<serviceable type="bool" archive="y">true</serviceable>
+		</hsi>
+	</instrumentation>
+
+	<input>
+		<keyboard>
+
+<key n="4">
+    <name>Ctrl-d</name>
+    <desc>Toggle SAS enabled</desc>
+    <binding>
+      <command>nasal</command>
+      <script>md900.sas.toggleEnable();</script>
+    </binding>
+  </key>
+
+			
+			<key n="82">
+				<name>R</name>
+				<desc>Toggle rotor brake</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var p = "/controls/rotor/brake";
+						setprop(p, !getprop(p));
+					</script>
+				</binding>
+			</key>
+			
+			<key n="105">
+				<name>i</name>
+				<desc>Toggle ignition switch</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						foreach (var e; controls.engines) {
+							if (e.selected.getValue()) {
+								var i = e.controls.getNode("ignition", 1);
+								i.setValue(!i.getValue());
+							}
+						}
+					</script>
+				</binding>
+			</key>
+
+			<key n="114">
+				<name>r</name>
+				<desc>Apply rotor brake</desc>
+				<binding>
+					<command>nasal</command>
+					<script>interpolate("/controls/rotor/brake", 1.0, 2)</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>interpolate("/controls/rotor/brake", 0.0, 2)</script>
+					</binding>
+				</mod-up>
+			</key>
+
+			<key n="118">
+				<name>Alt-v</name>
+				<desc>Toggle dynamic cockpit view</desc>
+				<mod-alt>
+					<binding>
+						<command>property-toggle</command>
+						<property>/sim/view/dynamic/enabled</property>
+					</binding>
+				</mod-alt>
+			</key>
+
+
+			<key n="123">
+				<name>{</name>
+				<desc>Shutdown Engines</desc>
+				<binding>
+					<command>nasal</command>
+					<script>md900.shutdown()</script>
+					<condition>
+						<property>/sim/signals/fdm-initialized</property>
+					</condition>
+				</binding>
+
+			</key>
+
+			<key n="125">
+				<name>}</name>
+				<desc>Start Engines</desc>
+				<binding>
+					<command>nasal</command>
+					<script>md900.startup()</script>
+					<condition>
+						<property>/sim/signals/fdm-initialized</property>
+					</condition>
+				</binding>
+
+			</key>
+
+			<key n="79">
+				<name>O</name>
+				<desc>Open aerotow hook</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/sim/hitches/aerotow/open</property>
+					<value type="bool">true</value>
+				</binding>
+			</key>
+			<key n="111">
+				<name>o</name>
+				<desc>Lock aerotow hook</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/sim/hitches/aerotow/open</property>
+					<value type="bool">false</value>
+				</binding>
+			</key>
+			<key n="15">
+				<name>Ctrl-o</name>
+				<desc>Find aircraft for aerotow</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/aerotow/find-aircraft</property>
+					<value type="bool">true</value>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>property-assign</command>
+						<property>/controls/aerotow/find-aircraft</property>
+						<value type="bool">false</value>
+					</binding>
+				</mod-up>
+			</key>
+                        <key n="102">
+                         <mod-alt>
+                          <name>Alt-f</name>
+                          <desc>inflate/repack Emergency Floats</desc>
+                          <binding>
+                           <command>nasal</command>
+                           <script>md900.toggle_floats();</script>
+                          </binding>
+                         </mod-alt>
+                        </key>
+
+		</keyboard>
+	</input>
+
+
+	<nasal>
+		<md900>
+			<file>Aircraft/md900/Nasal/md900.nas</file>
+			<file>Aircraft/md900/Nasal/fcs2.nas</file>
+			<file>Aircraft/md900/Nasal/light.nas</file>
+			<file>Aircraft/md900/Nasal/casdisable.nas</file>
+                        <file>Aircraft/md900/Models/instrumentation/kcs55/kcs55.nas</file>
+                        <file>Aircraft/md900/Nasal/wiper.nas</file>
+                        <kln90b>
+                         <file>Aircraft/md900/Models/instrumentation/kln90b/kln90b.nas</file>
+                        </kln90b>
+		</md900>
+	</nasal>
+
+
+	<rotors>
+		<main>
+		<coanda type="double">0</coanda>
+			<rpm type="double">0</rpm>
+		</main>
+	</rotors>
+
+</PropertyList>
