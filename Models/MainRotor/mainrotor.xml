@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+
+
+  <model>
+   <path>mainrotor.ac</path>
+    <offsets>
+
+      <x-m> 0.000 </x-m>
+
+      <y-m> 0.000 </y-m>
+
+      <z-m> -0.120 </z-m>
+
+      <roll-deg>    0 </roll-deg>
+
+      <pitch-deg>   0 </pitch-deg>
+
+      <heading-deg> 180 </heading-deg>
+
+    </offsets>
+  </model>
+  <animation>
+
+    <object-name>mainrotor1</object-name>
+
+    <object-name>mainrotor2</object-name>
+
+    <object-name>mainrotor3</object-name>
+
+    <object-name>mainrotor4</object-name>
+    <object-name>mainrotor5</object-name>
+    <object-name>Rotorhub1</object-name>
+
+    <object-name>Rotorhub2</object-name>
+  </animation>
+
+
+  <!-- Blades -->
+
+  <model>
+
+    <name>Blade1</name>
+
+    <path>Aircraft/md900/Models/MainRotor/blade1.xml</path>
+
+    <offsets>
+
+      <x-m> 0.000 </x-m>
+
+      <y-m> 0.000 </y-m>
+
+      <z-m> 0.230 </z-m>
+
+      <roll-deg>    0 </roll-deg>
+
+      <pitch-deg>   0 </pitch-deg>
+
+      <heading-deg> 0 </heading-deg>
+
+    </offsets>
+
+  </model>
+
+
+  <model>
+
+    <name>Blade2</name>
+
+    <path>Aircraft/md900/Models/MainRotor/blade2.xml</path>
+
+    <offsets>
+
+      <x-m> 0.000 </x-m>
+
+      <y-m> 0.000 </y-m>
+
+      <z-m> 0.230 </z-m>
+
+      <roll-deg>      0 </roll-deg>
+
+      <pitch-deg>     0 </pitch-deg>
+
+      <heading-deg> 72 </heading-deg>
+
+    </offsets>
+
+  </model>
+
+  <model>
+
+    <name>Blade3</name>
+
+    <path>Aircraft/md900/Models/MainRotor/blade3.xml</path>
+
+    <offsets>
+
+      <x-m> 0.000 </x-m>
+
+      <y-m> 0.000 </y-m>
+
+      <z-m> 0.230 </z-m>
+
+      <roll-deg>      0 </roll-deg>
+
+      <pitch-deg>     0 </pitch-deg>
+
+      <heading-deg> 144 </heading-deg>
+
+    </offsets>
+
+  </model>
+
+  <model>
+
+    <name>Blade4</name>
+
+    <path>Aircraft/md900/Models/MainRotor/blade4.xml</path>
+
+    <offsets>
+
+      <x-m> 0.000 </x-m>
+
+      <y-m> 0.000 </y-m>
+
+      <z-m> 0.230 </z-m>
+
+      <roll-deg>      0 </roll-deg>
+
+      <pitch-deg>     0 </pitch-deg>
+
+      <heading-deg> 216 </heading-deg>
+
+    </offsets>
+
+  </model>
+
+  <model>
+
+    <name>Blade5</name>
+
+    <path>Aircraft/md900/Models/MainRotor/blade5.xml</path>
+
+    <offsets>
+
+      <x-m> 0.000 </x-m>
+
+      <y-m> 0.000 </y-m>
+
+      <z-m> 0.230 </z-m>
+
+      <roll-deg>      0 </roll-deg>
+
+      <pitch-deg>     0 </pitch-deg>
+
+      <heading-deg> 288 </heading-deg>
+
+    </offsets>
+
+  </model>
+  <animation>
+
+    <name>rotorcomplet</name>
+
+    <object-name>mainrotor1</object-name>
+
+    <object-name>mainrotor2</object-name>
+ 
+    <object-name>mainrotor3</object-name>
+
+    <object-name>mainrotor4</object-name>
+
+    <object-name>mainrotor5</object-name>
+    <object-name>mainrotor4</object-name>
+
+    <object-name>mainrotor5</object-name>
+    <object-name>Rotorhub1</object-name>
+
+    <object-name>Rotorhub2</object-name>
+    <object-name>Blade1</object-name>
+
+    <object-name>Blade2</object-name>
+
+    <object-name>Blade3</object-name>
+
+    <object-name>Blade4</object-name>
+
+    <object-name>Blade5</object-name>
+  </animation>
+
+
+  <!-- Rotation du rotor -->
+
+  <animation>
+
+    <name>Ensemble</name>
+
+    <object-name>rotorcomplet</object-name>
+
+  </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>Ensemble</object-name>
+  <property>rotors/main/roll-deg</property>
+  <axis>
+   <x> 1 </x>
+   <y> 0 </y>
+   <z> 0 </z>
+  </axis>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>Ensemble</object-name>
+  <property>rotors/main/yaw-deg</property>
+  <axis>
+   <x> 0 </x>
+   <y> -1 </y>
+   <z> 0 </z>
+  </axis>
+ </animation>
+
+  <animation>
+
+    <type>spin</type>
+
+    <object-name>Ensemble</object-name>
+
+    <property>rotors/main/rpm</property>
+
+    <factor> 1 </factor>
+
+    <center>
+
+       <x-m> 0 </x-m>
+
+       <y-m> 0 </y-m>
+
+       <z-m> 0 </z-m>
+
+    </center>
+
+    <axis>
+
+      <x> 0 </x>
+
+      <y> 0 </y>
+
+      <z> 1 </z>
+
+    </axis>
+
+  </animation>
+
+
+</PropertyList>
+
