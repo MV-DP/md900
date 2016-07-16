@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+ 
+<path>MidPanel.ac</path>
+
+
+
+ <animation>
+  <object-name>SwitchCover</object-name>
+  <object-name>MidPanel</object-name>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>SwitchCover</object-name>
+  <object-name>Midpanel</object-name>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>SwitchCover</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-toggle</command>
+    <property>controls/lighting/cover</property>
+   </binding>
+   <binding>
+    <command>property-toggle</command>
+    <property>sim/model/sound/click</property>
+    <value>1</value>
+   </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>SwitchCover</object-name>
+  <property>controls/lighting/cover</property>
+  <factor> 90 </factor>
+ <center>
+  <x-m>-2.02683</x-m>
+  <y-m>0</y-m>
+  <z-m>0.13270</z-m>
+ </center>
+  <axis>
+   <x> 0 </x>
+   <y> 1 </y>
+   <z> 0 </z>
+  </axis>
+ </animation>    
+
+
+</PropertyList>
