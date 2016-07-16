@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>casque.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>casque</object-name>
+    <object-name>oreilles</object-name>
+    <object-name>touroreilles</object-name>
+    <object-name>micro</object-name>
+    <object-name>cable</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+</PropertyList>
