@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+ 
+
+<PropertyList>
+
+
+  <path>float-switch.ac</path>
+
+
+  <animation>
+
+    <object-name>Switch</object-name>
+
+    <object-name>base</object-name>
+
+    <object-name>info</object-name>
+
+  </animation>
+
+
+  <animation>
+
+    <type>material</type>
+
+    <object-name>Switch</object-name>
+
+    <object-name>base</object-name>
+
+    <object-name>info</object-name>
+
+
+   </animation>
+
+
+  <animation>
+
+    <type>pick</type>
+
+    <object-name>Switch</object-name>
+
+    <object-name>info</object-name>
+
+    <action>
+
+      <button>0</button>
+
+      <repeatable>false</repeatable>
+
+      <binding>
+
+        <command>property-toggle</command>
+
+        <property>controls/gear/floats-armed</property>
+
+      </binding>
+
+      <binding>
+
+        <command>property-toggle</command>
+
+        <property>sim/model/sound/click</property>
+
+        <value>1</value>
+
+      </binding>
+
+    </action>
+
+  </animation>
+
+
+  <animation>
+
+    <type>rotate</type>
+
+    <object-name>Switch</object-name>
+ 
+    <property>controls/gear/floats-armed</property>
+
+    <factor> 35 </factor>
+
+    <axis>
+
+      <x>  0 </x>
+
+      <y> -1 </y>
+
+      <z>  0 </z>
+
+    </axis>
+
+  </animation>
+
+
+  <animation>
+   <type>select</type>
+   <object-name>Switch</object-name>
+   <object-name>info</object-name>
+   <object-name>base</object-name>
+   <condition>
+    <property>sim/model/md900/emergencyfloats</property> 
+   </condition>
+  </animation>
+</PropertyList>
+
+
