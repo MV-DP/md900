@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+  <path>light-cone-large.ac</path>
+  <nopreview/>
+
+  <effect>
+    <inherits-from>Effects/light-cone</inherits-from>
+    <object-name>Cone-large</object-name>
+  </effect>
+
+  <animation>
+    <type>flash</type>
+    <object-name>slight_glow</object-name>
+    <center>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <power>20</power>
+    <factor>20</factor>
+    <offset>0</offset>
+    <two-sides type="bool">false</two-sides>
+    <min>0.01</min>
+    <max>100</max>
+  </animation>
+
+  <!--  REMBRANDT support for transparent objects -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>slight_glow</object-name>
+    <object-name>cone</object-name>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+  </effect>
+
+ </PropertyList>
