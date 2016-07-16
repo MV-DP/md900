@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<path>helimap.ac</path>
+	
+	<!-- <animation>
+        <type>material</type>
+		<object-name>Cube</object-name>
+            <emission>
+       <red>   0.886 </red>
+      <green> 0.984 </green>
+      <blue>  0.741 </blue>
+            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>-->
+
+</PropertyList>
