@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+  <model>
+    <livery>
+      <name type="string">COXAIRCARE</name>
+      <texture>liveries/COXAIRCARE.png</texture>
+    </livery>
+    <md900>
+      <searchlight_A800 type="bool">false</searchlight_A800>
+      <searchlight_SX16_Nose type="bool">false</searchlight_SX16_Nose>
+      <searchlight_SX16_Left type="bool">false</searchlight_SX16_Left>
+      <searchlight_SX16_Back type="bool">false</searchlight_SX16_Back>
+      <searchlight_SX16_Left_Back type="bool">false</searchlight_SX16_Left_Back>
+      <searchlight_SX5_Left_Back type="bool">false</searchlight_SX5_Left_Back>
+      <backlightcon type="bool">false</backlightcon>
+      <loudspeakers type="bool">false</loudspeakers>
+      <bear-paws type="bool">false</bear-paws>
+      <!-- multifunctioncarrier -->
+      <multifunctionleft type="bool">false</multifunctionleft>
+      <multifunctionright type="bool">false</multifunctionright>
+      <multileftfront type="bool">false</multileftfront>
+      <multileftback type="bool">false</multileftback>
+      <multirightfront type="bool">false</multirightfront>
+      <multirightback type="bool">false</multirightback>
+      <!-- mirrors -->
+      <mirrors type="bool">false</mirrors>
+      <!-- wirecutters -->
+      <wirecutter-up type="bool">false</wirecutter-up>
+      <wirecutter-down type="bool">false</wirecutter-down>
+      <!-- FLIR -->
+      <FLIR_SAFIRE_Right_Grey type="bool">false</FLIR_SAFIRE_Right_Grey>
+      <FLIR_SAFIRE_Nose_Grey type="bool">false</FLIR_SAFIRE_Nose_Grey>
+      <FLIR_SAFIRE_Nose type="bool">false</FLIR_SAFIRE_Nose>
+      <!-- nose -->
+      <Radar-nose type="bool">false</Radar-nose>
+      <nose-mount type="bool">false</nose-mount>
+      <!-- skids -->
+      <longerskids type="bool">false</longerskids>
+      <emergencyfloats type="bool">false</emergencyfloats>
+      <!-- winch -->
+      <winchfix type="bool">false</winchfix>
+      <winch type="bool">false</winch>
+      <!-- cabin -->
+      <EMS type="bool">true</EMS>
+      <VIP type="bool">false</VIP>
+    </md900>
+  </model>
+</sim>
+</PropertyList>
