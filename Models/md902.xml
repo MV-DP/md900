@@ -510,7 +510,7 @@
   <heading-deg> 0 </heading-deg>
  </offsets>			
 </model>
-<model>
+<!-- <model>
  <name>mainrotors_dirt</name>
  <path>Aircraft/md900/Models/particle/rotor_particle.xml</path>
  <offsets>
@@ -518,7 +518,7 @@
   <y-m>0.0000</y-m>
   <z-m>0.0000</z-m>
  </offsets>			
-</model>
+</model> -->
  <animation>
     <type>select</type>
       <object-name>Landlight</object-name>
@@ -962,5 +962,35 @@
    <property>sim/model/md900/winch</property>
   </condition>
  </animation>
+ <effect>
+  <inherits-from>Aircraft/md900/Models/Effects/reflectglas-uber</inherits-from>
+  <object-name>BDRglas</object-name>
+  <object-name>BDLglas</object-name>
+  <object-name>FDLglas</object-name>
+  <object-name>FDRglas</object-name>
+  <object-name>NoseGlas</object-name>
+ </effect>
+ <effect>
+  <inherits-from>Aircraft/md900/Models/Effects/reflect-uber</inherits-from>
+  <object-name>fuselage</object-name>
+  <object-name>fuselage.007</object-name>
+  <object-name>Reardoor</object-name>
+  <object-name>rudder.L</object-name>
+  <object-name>udder.R</object-name>
+  <object-name>BackDoor.L</object-name>
+  <object-name>BackDoor.R</object-name>
+  <object-name>FrontDoor.L</object-name>
+  <object-name>FrontDoor.R</object-name>
+  <object-name>NOTAR</object-name>
+  <object-name>wirecutter-up.001</object-name>
+  <object-name>wirecutter-up</object-name>
+  <object-name>wirecutter-down</object-name>
+  <object-name>Radar-nose</object-name>
+  <object-name>nose-mount</object-name>
+  <object-name>longerskids</object-name>
+  <object-name>winchfix</object-name>
+  <object-name>winch</object-name>
+  <object-name>AirIntake</object-name>
+ </effect>
 </PropertyList>
 
