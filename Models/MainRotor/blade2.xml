@@ -211,6 +211,17 @@
       <z> 0 </z>
     </axis>
   </animation>
+  <effect>
+  <inherits-from>Effects/model-transparent</inherits-from>
+  <object-name>propblur1</object-name>
+  <object-name>propblur2</object-name>
+  <object-name>propblur3</object-name>
+  <object-name>propblur4</object-name>
+  <object-name>propdisc1</object-name>
+  <object-name>propdisc2</object-name>
+  <object-name>propdisc3</object-name>
+  <object-name>propdisc4</object-name>
+ </effect>
 
 </PropertyList>
 
