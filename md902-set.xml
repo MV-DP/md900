@@ -9,6 +9,12 @@ MD-900 simulation config.
 <PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
 	<sim>
 		<description>McDonnell Douglas MD 902 Explorer</description>
+		<long-description>
+                 The McDonnell Douglas (MD Helicopters) MD 902 Explorer is a twin engined light utility helicopter.
+		 Instead of using the conventional tail rotor system it uses NOTAR (meaning NO TAil Rotor),
+		 the concept uses the Coanda effect. The Explorer has a five composite bladed main rotor, 
+		 and has a fuselage and tail boom made from carbonfibre.
+                </long-description>
 		<author>Martien van der Plas, Marco F.(3d model), Heiko Schulz (FDM)</author>
 		<status>alpha</status>
 		<rating>
@@ -28,10 +34,33 @@ MD-900 simulation config.
 		<sound>
 			<path>Aircraft/md900/Sounds/sound.xml</path>
 		</sound>
+		
+	        <tags>
+                 <tag>helicopter</tag>
+		 <tag>twin-engine</tag>
+                </tags>
 
 		<startup>
 			<splash-texture>Aircraft/md900/MD-902-Splash.png</splash-texture>
 		</startup>
+		
+		<previews>
+	         <preview>
+                  <type>exterior</type>
+                  <splash type="bool">true</splash>
+                  <path>Splash/exterior1.png</path>
+                 </preview>
+                 <preview>
+                  <type>exterior</type>
+                  <splash type="bool">true</splash>
+                  <path>Splash/exterior2.png</path>
+                 </preview>
+                 <preview>
+                  <type>exterior</type>
+                  <splash type="bool">true</splash>
+                  <path>Splash/exterior3.png</path>
+                 </preview>
+                </previews>
 
                 <gui>
                  <style>
