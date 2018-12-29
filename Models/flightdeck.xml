@@ -1,0 +1,1081 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+
+
+	
+ 
+	
+	<model>
+
+		<name>AI</name>
+
+		<path>Aircraft/md900/Models/instrumentation/AI/ai/ai.xml</path>
+
+		<offsets>
+
+			<x-m>-3.495</x-m>
+
+			<y-m>0.316</y-m>
+
+			<z-m>1.670</z-m>
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+
+
+	<model>
+	
+        	<name>ASI</name>
+
+		<path>Aircraft/md900/Models/instrumentation/asi/asi.xml</path>
+
+		<offsets>
+
+			<!-- fix me: set back for now -->
+
+			<x-m>-3.495</x-m>
+
+			<y-m>0.216</y-m>
+
+			<z-m>1.670</z-m>
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+
+
+	<model>
+
+		<name>ALT</name>
+
+		<path>Aircraft/md900/Models/instrumentation/alt/altimeter.xml</path>
+
+		<offsets>
+
+			<!-- fix me: set back for now -->
+
+			<x-m>-3.495</x-m>
+
+			<y-m>0.421</y-m>
+
+			<z-m>1.670</z-m>
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+
+	<model>
+
+		<name>VSI</name>
+
+		<path>Aircraft/md900/Models/instrumentation/vsi/vsi.xml</path>
+
+		<offsets>
+
+			<!-- fix me: set back for now -->
+
+			<x-m>-3.475</x-m>
+
+			<y-m>0.421</y-m>
+
+			<z-m>1.580</z-m>
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+
+	<model>
+
+		<name>Plate</name>
+
+		<path>Aircraft/md900/Models/instrumentation/plate/plate.xml</path>
+
+		<offsets>
+
+			<!-- fix me: set back for now -->
+
+			<x-m>-3.450</x-m>
+
+			<y-m>0.421</y-m>
+
+			<z-m>1.490</z-m>
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+
+
+	<model>
+
+		<name>right HSI</name>
+
+		<path>Aircraft/md900/Models/instrumentation/kcs55/ki525a.xml</path>
+
+
+		<offsets>
+
+
+			<x-m>-3.463</x-m>
+
+			<y-m>0.318</y-m>
+
+			<z-m>1.580</z-m>
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	<model>
+
+		<name>DME</name>
+
+		<path>Aircraft/md900/Models/instrumentation/dme/dme.xml</path>
+
+
+		<offsets>
+
+
+			<x-m>-3.450</x-m>
+
+			<y-m>0.318</y-m>
+
+			<z-m>1.465</z-m>
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	<model>
+
+		<name>marker</name>
+
+		<path>Aircraft/md900/Models/instrumentation/marker/marker.xml</path>
+
+
+		<offsets>
+
+
+			<x-m>-3.450</x-m>
+
+			<y-m>0.318</y-m>
+
+			<z-m>1.520</z-m>
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+	<model>
+
+		<name>VOR</name>
+
+		<path>Aircraft/md900/Models/instrumentation/vor/vor.xml</path>
+
+		<offsets>
+
+                        <x-m>-3.470</x-m>
+                        <y-m>0.217</y-m>
+                        <z-m>1.580</z-m>
+			<pitch-deg>-14.4</pitch-deg>
+
+		</offsets>
+
+	</model>
+	<!--
+	
+        <model>
+
+		<name>VOR2</name>
+
+		<path>Aircraft/md900/Models/instrumentation/vor/vor.xml</path>
+
+		<offsets>
+
+			<x-m>-3.445</x-m>
+
+			<y-m>-0.188</y-m>
+
+			<z-m>1.490</z-m>
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+		</offsets>
+
+	</model>
+    -->
+
+	<model>
+
+		<name>Radar-Alt</name>
+
+		<path>Aircraft/md900/Models/instrumentation/radar-alt/kra10a.xml</path>
+
+		<offsets>
+
+			<x-m>-3.450</x-m>
+
+			<y-m>0.217</y-m>
+
+			<z-m>1.490</z-m>
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+		</offsets>
+
+	</model>
+
+
+
+
+	<!--midle instruments-->
+	<model>
+
+		<name>screen</name>
+
+		<path>Aircraft/md900/Models/instrumentation/helimap/helimap.xml</path>
+		<offsets>
+
+			<x-m>-3.460</x-m>
+
+			<y-m>-0.040</y-m>
+
+			<z-m>1.486</z-m>
+
+
+
+
+			<pitch-deg>75.6</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	
+<model>
+
+		<name>vemd</name>
+
+		<path>Aircraft/md900/Models/instrumentation/panel/panel.xml</path>
+
+		<offsets>
+
+			<x-m>-3.480</x-m>
+
+			<y-m>0.0</y-m>
+
+			<z-m>1.610</z-m>
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	
+<model>
+
+		<name>kln90b</name>
+
+		<path>Aircraft/md900/Models/instrumentation/kln90b/kln90b.xml</path>
+
+		<offsets>
+
+                        <x-m>-3.500</x-m>
+                        <y-m>0.0</y-m>
+                        <z-m>1.725</z-m>
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	<model>
+
+		<name>AI-mid</name>
+
+		<path>Aircraft/md900/Models/instrumentation/AI/AI.xml</path>
+
+		<offsets>
+
+			<x-m>-3.427</x-m>
+
+			<y-m>0.090</y-m>
+
+			<z-m>1.486</z-m>
+
+
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	<model>
+
+		<name>audio</name>
+
+		<path>Aircraft/md900/Models/instrumentation/audio-plug/audio-plug.xml</path>
+
+		<offsets>
+
+			<x-m>-3.433</x-m>
+
+			<y-m>0.150</y-m>
+
+			<z-m>1.486</z-m>
+
+
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+<!--
+	<model>
+
+		<name>left ALT</name>
+
+		<path>Aircraft/md900/Models/instrumentation/alt2/altimeter.xml</path>
+
+		<offsets>
+
+			<x-m>-3.490</x-m>
+
+			<y-m>-0.188</y-m>
+
+			<z-m>1.670</z-m>
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+-->
+
+<!--
+	<model>
+
+		<name>left VSI</name>
+
+		<path>Aircraft/md900/Models/instrumentation/vsi/vsi.xml</path>
+
+		<offsets>
+
+			<x-m>-3.470</x-m>
+
+			<y-m>-0.188</y-m>
+
+			<z-m>1.580</z-m>
+
+
+			<pitch-deg>-14.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+-->
+
+        <model>
+
+		<name>compass</name>
+
+		<path>Aircraft/md900/Models/instrumentation/compass/compass.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.275</x-m>
+
+			<y-m>0.000</y-m>
+
+			<z-m>2.000</z-m>
+			<pitch-deg>0</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	
+<!--misc-->
+	
+<model>
+
+		<name>Nav-switch</name>
+
+		<path>Aircraft/md900/Models/instrumentation/Switch/nav-lights.xml</path>
+
+		<offsets>
+
+
+			<x-m>-2.8</x-m>
+
+			<y-m>-0.058</y-m>
+
+			<z-m>1.325</z-m>
+
+
+			<pitch-deg>-88</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+	
+<model>
+
+		<name>Land-switch</name>
+
+		<path>Aircraft/md900/Models/instrumentation/Switch/land-lights.xml</path>
+
+		<offsets>
+
+
+			<x-m>-2.8</x-m>
+
+			<y-m>-0.098</y-m>
+
+			<z-m>1.325</z-m>
+
+
+			<pitch-deg>-88</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	
+<model>
+
+		<name>Unused-switch-fuel-1</name>
+
+		<path>Aircraft/md900/Models/instrumentation/Switch/Unused/Unused.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.015</x-m>
+
+			<y-m>-0.120</y-m>
+
+			<z-m>1.332</z-m>
+
+
+			<pitch-deg>-88</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	
+<model>
+
+		<name>Unused-switch-fuel-2</name>
+
+		<path>Aircraft/md900/Models/instrumentation/Switch/Unused/Unused.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.015</x-m>
+
+			<y-m>-0.035</y-m>
+
+			<z-m>1.332</z-m>
+
+
+			<pitch-deg>-88</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+ <model>
+  <name>Unused-switch-electrical-1</name>
+  <path>Aircraft/md900/Models/instrumentation/Switch/Unused/Unused.xml</path>
+  <offsets>
+   <x-m>-2.89812</x-m>
+   <y-m>-0.13</y-m>
+   <z-m>1.32752</z-m>
+   <pitch-deg>-88</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Unused-switch-electrical-2</name>
+  <path>Aircraft/md900/Models/instrumentation/Switch/Unused/Unused.xml</path>
+  <offsets>
+   <x-m>-2.89812</x-m>
+   <y-m>-0.09523</y-m>
+   <z-m>1.32752</z-m>
+   <pitch-deg>-88</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Unused-switch-electrical-3</name>
+  <path>Aircraft/md900/Models/instrumentation/Switch/Unused/Unused.xml</path>
+  <offsets>
+   <x-m>-2.89812</x-m>
+   <y-m>-0.06046</y-m>
+   <z-m>1.32752</z-m>
+   <pitch-deg>-88</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Unused-switch-electrical-4</name>
+  <path>Aircraft/md900/Models/instrumentation/Switch/Unused/Unused.xml</path>
+  <offsets>
+   <x-m>-2.89812</x-m>
+   <y-m>-0.02567</y-m>
+   <z-m>1.32752</z-m>
+   <pitch-deg>-88</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Unused-switch-AC-1</name>
+  <path>Aircraft/md900/Models/instrumentation/Switch/Unused/Unused.xml</path>
+  <offsets>
+   <x-m>-2.68224</x-m>
+   <y-m>-0.13</y-m>
+   <z-m>1.32013</z-m>
+   <pitch-deg>-88</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Unused-switch-AC-2</name>
+  <path>Aircraft/md900/Models/instrumentation/Switch/Unused/Unused.xml</path>
+  <offsets>
+   <x-m>-2.68224</x-m>
+   <y-m>-0.09523</y-m>
+   <z-m>1.32013</z-m>
+   <pitch-deg>-88</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Unused-switch-AC-3</name>
+  <path>Aircraft/md900/Models/instrumentation/Switch/Unused/PitotheatR.xml</path>
+  <offsets>
+   <x-m>-2.64224</x-m>
+   <y-m>-0.13</y-m>
+   <z-m>1.32013</z-m>
+   <pitch-deg>-88</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Unused-switch-AC-XXX</name>
+  <path>Aircraft/md900/Models/instrumentation/Switch/Unused/Unused.xml</path>
+  <offsets>
+   <x-m>-2.64224</x-m>
+   <y-m>-0.09523</y-m>
+   <z-m>1.32013</z-m>
+   <pitch-deg>-88</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Unused-switch-AC-4</name>
+  <path>Aircraft/md900/Models/instrumentation/Switch/Unused/Unused.xml</path>
+  <offsets>
+   <x-m>-2.64224</x-m>
+   <y-m>-0.06046</y-m>
+   <z-m>1.32013</z-m>
+   <pitch-deg>-88</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Unused-switch-AC-5</name>
+  <path>Aircraft/md900/Models/instrumentation/Switch/Unused/Unused.xml</path>
+  <offsets>
+   <x-m>-2.64224</x-m>
+   <y-m>-0.02567</y-m>
+   <z-m>1.32013</z-m>
+   <pitch-deg>-88</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Unused-switch-wiper-1</name>
+  <path>Aircraft/md900/Models/instrumentation/Switch/Unused/Unused.xml</path>
+  <offsets>
+   <x-m>-2.58528</x-m>
+   <y-m>-0.11301</y-m>
+   <z-m>1.31766</z-m>
+   <pitch-deg>-88</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Unused-switch-wiper-2</name>
+  <path>Aircraft/md900/Models/instrumentation/Switch/Unused/Wiper.xml</path>
+  <offsets>
+   <x-m>-2.58528</x-m>
+   <y-m>-0.07824</y-m>
+   <z-m>1.31766</z-m>
+   <pitch-deg>-88</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Unused-switch-wiper-3</name>
+  <path>Aircraft/md900/Models/instrumentation/Switch/Unused/Unused.xml</path>
+  <offsets>
+   <x-m>-2.58528</x-m>
+   <y-m>-0.04347</y-m>
+   <z-m>1.31766</z-m>
+   <pitch-deg>-88</pitch-deg>
+  </offsets>
+ </model>
+
+	
+<model>
+
+		<name>PitotheatR</name>
+
+		<path>Aircraft/md900/Models/instrumentation/Switch/Unused/PitotheatR.xml</path>
+
+		<offsets>
+
+
+			<x-m>-2.44</x-m>
+
+			<y-m>-0.030</y-m>
+
+			<z-m>1.3114</z-m>
+
+
+			<pitch-deg>-88</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	
+<model>
+
+		<name>PitotheatL</name>
+
+		<path>Aircraft/md900/Models/instrumentation/Switch/Unused/PitotheatL.xml</path>
+
+		<offsets>
+
+
+			<x-m>-2.37</x-m>
+
+			<y-m>-0.030</y-m>
+
+			<z-m>1.309</z-m>
+
+
+			<pitch-deg>-88</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	<model>
+
+		<name>float-arm switch</name>
+
+		<path>Aircraft/md900/Models/instrumentation/Switch/Floats/float-switch.xml</path>
+
+		<offsets>
+
+                 <x-m>-2.48</x-m>
+                 <y-m>-0.060</y-m>
+                 <z-m>1.3116</z-m>
+                 <pitch-deg>-88</pitch-deg>
+		
+                </offsets>
+
+	</model>
+	
+<model>
+
+		<name>TurnKnob</name>
+
+		<path>Aircraft/md900/Models/instrumentation/TurnKnob/TurnKnob.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.075</x-m>
+
+			<y-m>-0.035</y-m>
+
+			<z-m>1.333</z-m>
+
+
+			<pitch-deg>-2</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	
+<model>
+
+		<name>TurnKnob</name>
+
+		<path>Aircraft/md900/Models/instrumentation/TurnKnob/TurnKnob.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.075</x-m>
+
+			<y-m>-0.120</y-m>
+
+			<z-m>1.333</z-m>
+
+
+			<pitch-deg>-2</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	
+<model>
+
+		<name>mags</name>
+
+		<path>Aircraft/md900/Models/instrumentation/magneto-switch/mags.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.130</x-m>
+
+			<y-m>0.080</y-m>
+
+			<z-m>1.300</z-m>
+
+
+			<pitch-deg>0</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+
+	
+<model>
+
+		<name>kr87-adf</name>
+
+		<path>Aircraft/md900/Models/instrumentation/kr87-adf/kr87.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.330</x-m>
+
+			<y-m>0.080</y-m>
+
+			<z-m>1.350</z-m>
+
+
+			<pitch-deg>-81.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+
+	
+<model>
+
+		<name>kx165</name>
+
+		<path>Aircraft/md900/Models/instrumentation/kx165/kx165-1.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.285</x-m>
+
+			<y-m>0.080</y-m>
+
+			<z-m>1.346</z-m>
+
+
+			<pitch-deg>-81.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+
+	
+<model>
+
+		<name>kx165</name>
+
+		<path>Aircraft/md900/Models/instrumentation/kx165/kx165-2.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.230</x-m>
+
+			<y-m>0.080</y-m>
+
+			<z-m>1.335</z-m>
+
+
+			<pitch-deg>-81.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+	
+<model>
+
+		<name>kt70</name>
+
+		<path>Aircraft/md900/Models/instrumentation/kt70/kt70.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.180</x-m>
+
+			<y-m>0.080</y-m>
+
+			<z-m>1.337</z-m>
+
+
+			<pitch-deg>-81.4</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+	
+<model>
+
+		<name>AEM-AA97</name>
+
+		<path>Aircraft/md900/Models/instrumentation/AEM-AA97/AEM-AA97.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.280</x-m>
+
+			<y-m>-0.070</y-m>
+
+			<z-m>1.352</z-m>
+
+
+			<pitch-deg>8.6</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+
+	
+<model>
+
+		<name>AEM-AA97</name>
+
+		<path>Aircraft/md900/Models/instrumentation/AEM-AA97/AEM-AA97.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.196</x-m>
+
+			<y-m>-0.070</y-m>
+
+			<z-m>1.339</z-m>
+
+
+			<pitch-deg>8.6</pitch-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+	
+<model>
+
+		<name>ventilation</name>
+
+		<path>Aircraft/md900/Models/instrumentation/ventilation.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.1937</x-m>
+
+			<y-m>0.7762</y-m>
+
+			<z-m>1.6122</z-m>
+
+
+			<heading-deg>-80.0</heading-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+
+	
+<model>
+
+		<name>ventilation</name>
+
+		<path>Aircraft/md900/Models/instrumentation/ventilation.xml</path>
+
+		<offsets>
+
+
+			<x-m>-3.1937</x-m>
+
+			<y-m>-0.7762</y-m>
+
+			<z-m>1.6122</z-m>
+
+
+			<heading-deg>80.0</heading-deg>
+
+
+		</offsets>
+
+	</model>
+
+
+
+
+        <model>
+
+		<name>casque</name>
+
+		<path>Aircraft/md900/Models/instrumentation/Casque/casque.xml</path>
+
+		<offsets>
+
+
+			<x-m>-2.65</x-m>
+
+			<y-m>-0.080</y-m>
+
+			<z-m>2.230</z-m>
+                        <roll-deg> 50 </roll-deg>
+			<pitch-deg>90</pitch-deg>
+                        <heading-deg>-90.0</heading-deg>
+ 		</offsets>
+
+	</model>
+
+        <model>
+
+		<name>MidPanel</name>
+
+		<path>Aircraft/md900/Models/instrumentation/MidPanel/MidPanel.xml</path>
+
+		<offsets>
+
+
+			<x-m>-0.93</x-m>
+
+			<y-m>0.0</y-m>
+
+			<z-m>1.2</z-m>
+                        <roll-deg> 0 </roll-deg>
+			<pitch-deg>0</pitch-deg>
+                        <heading-deg>0</heading-deg>
+ 		</offsets>
+
+	</model>
+
+        <model>
+
+		<name>Extinguisher</name>
+
+		<path>Aircraft/md900/Models/instrumentation/Extinguisher/Extinguisher.xml</path>
+
+		<offsets>
+
+
+			<x-m>-2.4</x-m>
+
+			<y-m>0.03</y-m>
+
+			<z-m>1.23</z-m>
+                        <roll-deg> 0 </roll-deg>
+			<pitch-deg>0</pitch-deg>
+                        <heading-deg>-90</heading-deg>
+ 		</offsets>
+
+	</model>
+
+ 
+
+</PropertyList>
