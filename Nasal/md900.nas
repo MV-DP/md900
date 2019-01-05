@@ -41,7 +41,7 @@ aircraft.light.new("sim/model/md900/lighting/strobe-bottom", [0.05, 1.03], strob
 var beacon_switch = props.globals.initNode("controls/lighting/beacon", 1, "BOOL");
 aircraft.light.new("sim/model/md900/lighting/beacon-top", [0.62, 0.62], beacon_switch);
 aircraft.light.new("sim/model/md900/lighting/beacon-bottom", [0.63, 0.63], beacon_switch);
-
+aircraft.light.new("sim/model/md900/lighting/clock", [1.00, 1.00], strobe_switch);
 
 # nav lights ========================================================
 var nav_light_switch = props.globals.initNode("controls/lighting/nav-lights", 1, "BOOL");
