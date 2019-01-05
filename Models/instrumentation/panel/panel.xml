@@ -1,0 +1,430 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>panel.ac</path>
+
+<animation>
+ <object-name>CABHEAT</object-name>
+ <object-name>BATHOT</object-name>
+ <object-name>BATWRM</object-name>
+ <object-name>ROTORBRAKE</object-name>
+ <object-name>CABINDOOR</object-name>
+ <object-name>BAGGAGEDOOR</object-name>
+ <object-name>1HYD2</object-name>
+ <object-name>IIDS</object-name>
+ <object-name>OATC</object-name>
+ <object-name>clock-digit1</object-name>
+ <object-name>clock-digit2</object-name>
+ <object-name>clock-digit3</object-name>
+ <object-name>clock-digit4</object-name>
+ <object-name>clock-digit5</object-name>
+ <object-name>temp-digit1</object-name>
+ <object-name>temp-digit2</object-name>
+ <object-name>temp-digit3</object-name>
+ <object-name>BlueLines</object-name>
+ <object-name>R1</object-name>
+ <object-name>R2</object-name>
+ <object-name>R3</object-name>
+ <object-name>R4</object-name>
+ <object-name>R5</object-name>
+ <object-name>R6</object-name>
+ <object-name>R7</object-name>
+ <object-name>R8</object-name>
+ <object-name>R9</object-name>
+ <object-name>R10</object-name>
+ <object-name>R11</object-name>
+ <object-name>R12</object-name>
+ <object-name>R13</object-name>
+ <object-name>Y1</object-name>
+ <object-name>Y2</object-name>
+ <object-name>Y3</object-name>
+ <object-name>Y4</object-name>
+ <object-name>Y5</object-name>
+ <object-name>Y6</object-name>
+ <object-name>Y7</object-name>
+ <object-name>Y8</object-name>
+ <object-name>Y9</object-name>
+ <object-name>Y10</object-name>
+ <object-name>Y11</object-name>
+ <object-name>Y12</object-name>
+ <object-name>Y13</object-name>
+ <object-name>Y14</object-name>
+ <object-name>Y15</object-name>
+ <object-name>Y16</object-name>
+ <object-name>C1</object-name>
+ <object-name>Ccenter</object-name>
+ <object-name>C2</object-name>
+ <object-name>PSI1</object-name>
+ <object-name>PSIcenter</object-name>
+ <object-name>PSI2</object-name>
+ <object-name>LOAD1</object-name>
+ <object-name>LOAD2</object-name>
+ <object-name>GEN1</object-name>
+ <object-name>GEN2</object-name>
+ <object-name>NG1</object-name>
+ <object-name>NG2</object-name>
+ <object-name>LB</object-name>
+ <object-name>FUEL</object-name>
+ <object-name>CHIPS1</object-name>
+ <object-name>CHIPS2</object-name>
+ <object-name>CHIPScenter</object-name>
+ <object-name>FIRE1</object-name>
+ <object-name>FIRE2</object-name>
+ <object-name>FIREcenter</object-name>
+ <type>material</type>
+ <emission>
+  <red>5</red>
+  <green>5</green>
+  <blue>5</blue>
+  </emission>
+</animation>
+
+<animation>
+ <type>select</type>
+ <object-name>CABINDOOR</object-name>
+ <condition>
+  <or>
+   <equals>
+    <property>sim/model/md900/door-positions/leftFrontDoor/position-norm</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>sim/model/md900/door-positions/rightFrontDoor/position-norm</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>sim/model/md900/door-positions/leftBackDoor/position-norm</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>sim/model/md900/door-positions/rightBackDoor/position-norm</property>
+    <value>1</value>
+   </equals>
+  </or>
+ </condition>
+</animation>
+
+<animation>
+ <type>select</type>
+ <object-name>BAGGAGEDOOR</object-name>
+ <condition>
+  <or>
+   <equals>
+    <property>sim/model/md900/door-positions/leftRearDoor/position-norm</property>
+    <value>1</value>
+   </equals>
+  </or>
+ </condition>
+</animation>
+
+<animation>
+ <type>select</type>
+ <object-name>ROTORBRAKE</object-name>
+ <condition>
+  <or>
+   <equals>
+    <property>/controls/rotor/brake</property>
+    <value>1</value>
+   </equals>
+  </or>
+ </condition>
+</animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>clock-digit1</object-name>
+    <property>sim/time/real/hour</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>clock-digit2</object-name>
+    <property>sim/time/real/hour</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>clock-digit3</object-name>
+    <condition>
+     <property>/sim/model/md900/lighting/clock/state</property>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>clock-digit4</object-name>
+    <property>sim/time/real/minute</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>clock-digit5</object-name>
+    <property>sim/time/real/minute</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+   <animation>
+    <type>select</type>
+    <object-name>temp-digit1</object-name>
+	<condition>
+     <or>
+     <equals>
+      <property>/environment/temperature-degc</property>
+      <value>0</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+  
+    <animation>
+    <type>textranslate</type>
+    <object-name>temp-digit2</object-name>
+    <property>/environment/temperature-degc</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>temp-digit3</object-name>
+    <property>/environment/temperature-degc</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+   <type>select</type>
+   <object-name>CABHEAT</object-name>
+   <condition>
+    <or>
+	 <equals>
+      <property>sim/crashed</property>
+      <value type="bool">true</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+  
+  <animation>
+   <type>select</type>
+   <object-name>BATHOT</object-name>
+   <condition>
+    <or>
+	 <equals>
+      <property>sim/crashed</property>
+      <value type="bool">true</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+  
+  <animation>
+   <type>select</type>
+   <object-name>BATWRM</object-name>
+   <condition>
+    <or>
+	 <equals>
+      <property>sim/crashed</property>
+      <value type="bool">true</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+  
+  <animation>
+   <type>select</type>
+   <object-name>IIDS</object-name>
+   <condition>
+    <or>
+	 <equals>
+      <property>sim/crashed</property>
+      <value type="bool">true</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+  
+  <animation>
+   <type>select</type>
+    <object-name>R1</object-name>
+    <object-name>R2</object-name>
+    <object-name>R3</object-name>
+    <object-name>R4</object-name>
+    <object-name>R5</object-name>
+    <object-name>R6</object-name>
+    <object-name>R7</object-name>
+    <object-name>R8</object-name>
+    <object-name>R9</object-name>
+    <object-name>R10</object-name>
+    <object-name>R11</object-name>
+    <object-name>R12</object-name>
+    <object-name>R13</object-name>
+    <object-name>Y1</object-name>
+    <object-name>Y2</object-name>
+    <object-name>Y3</object-name>
+    <object-name>Y4</object-name>
+    <object-name>Y5</object-name>
+    <object-name>Y6</object-name>
+    <object-name>Y7</object-name>
+    <object-name>Y8</object-name>
+    <object-name>Y9</object-name>
+    <object-name>Y10</object-name>
+    <object-name>Y11</object-name>
+    <object-name>Y12</object-name>
+    <object-name>Y13</object-name>
+    <object-name>Y14</object-name>
+    <object-name>Y15</object-name>
+    <object-name>Y16</object-name>
+   <condition>
+    <or>
+	 <equals>
+      <property>sim/crashed</property>
+      <value type="bool">true</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+  
+  <animation>
+   <type>select</type>
+   <object-name>FIRE1</object-name>
+   <condition>
+    <or>
+	 <equals>
+      <property>sim/crashed</property>
+      <value type="bool">true</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+  
+  <animation>
+   <type>select</type>
+   <object-name>FIREcenter</object-name>
+   <condition>
+    <or>
+	 <equals>
+      <property>sim/crashed</property>
+      <value type="bool">true</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+  
+  <animation>
+   <type>select</type>
+   <object-name>FIRE2</object-name>
+   <condition>
+    <or>
+	 <equals>
+      <property>sim/crashed</property>
+      <value type="bool">true</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+  
+    <animation>
+   <type>select</type>
+   <object-name>CHIPS1</object-name>
+   <condition>
+    <or>
+	 <equals>
+      <property>sim/crashed</property>
+      <value type="bool">true</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+  
+  <animation>
+   <type>select</type>
+   <object-name>CHIPScenter</object-name>
+   <condition>
+    <or>
+	 <equals>
+      <property>sim/crashed</property>
+      <value type="bool">true</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+  
+  <animation>
+   <type>select</type>
+   <object-name>CHIPS2</object-name>
+   <condition>
+    <or>
+	 <equals>
+      <property>sim/crashed</property>
+      <value type="bool">true</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+  
+  <animation>
+   <type>select</type>
+   <object-name>GEN1</object-name>
+   <condition>
+    <or>
+	 <equals>
+      <property>controls/electric/engine[0]/generator</property>
+      <value type="bool">true</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+  
+  <animation>
+   <type>select</type>
+   <object-name>GEN2</object-name>
+   <condition>
+    <or>
+	 <equals>
+      <property>controls/electric/engine[1]/generator</property>
+      <value type="bool">true</value>
+     </equals>
+    </or>
+   </condition>
+  </animation>
+    
+</PropertyList>
