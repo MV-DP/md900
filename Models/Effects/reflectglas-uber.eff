@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <PropertyList>
-	<name>ec135reflectglas-uber</name>
+	<name>reflectglas-uber</name>
 	<inherits-from>Effects/model-combined-transparent</inherits-from>
 	<parameters>
 		<rain-enabled type="int">1</rain-enabled>
