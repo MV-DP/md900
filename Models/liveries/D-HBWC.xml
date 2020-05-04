@@ -5,7 +5,7 @@
 <sim>
   <model>
     <livery>
-      <name type="string">Polizei (D-HBWC)</name>
+      <name type="string">Polizei Baden-Wurttemberg (D-HBWC)</name>
       <texture>liveries/D-HBWC.png</texture>
     </livery>
     <md900>
