@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>blade.ac</path>
+
+  <animation>
+    <object-name>rotorshaft</object-name>
+    <object-name>blade1</object-name>
+    <object-name>blade2</object-name>
+    <object-name>blade3</object-name>
+    <object-name>blade4</object-name>
+	<object-name>blade5</object-name>
+    <object-name>trim</object-name>
+	<object-name>blurred1</object-name>
+    <object-name>blurred2</object-name>
+    <object-name>blurred3</object-name>
+    <object-name>blurred4</object-name>
+	<object-name>blurred5</object-name>
+  </animation>
+  
+  
+  <effect>
+    <inherits-from>Aircraft/md900/Models/Effects/reflect-uber-rotor</inherits-from>
+    <object-name>rotorshaft</object-name>
+    <object-name>blade1</object-name>
+    <object-name>blade2</object-name>
+    <object-name>blade3</object-name>
+    <object-name>blade4</object-name>
+	<object-name>blade5</object-name>
+    <object-name>trim</object-name>
+  </effect>
+  
+ 
+  <effect>
+  <inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>blurred1</object-name>
+		<object-name>blurred2</object-name>
+		<object-name>blurred3</object-name>
+		<object-name>blurred4</object-name>
+		<object-name>blurred5</object-name>
+  </effect>
+
+ 	<animation>
+		<type>select</type>
+        <object-name>blade1</object-name>
+        <object-name>blade2</object-name>
+        <object-name>blade3</object-name>
+        <object-name>blade4</object-name>
+	    <object-name>blade5</object-name>
+        <object-name>trim</object-name>
+		<condition>
+			<less-than>
+				<property>rotors/main/rpm</property>
+				<value>175</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>blurred1</object-name>
+		<object-name>blurred2</object-name>
+		<object-name>blurred3</object-name>
+		<object-name>blurred4</object-name>
+		<object-name>blurred5</object-name>
+		<condition>
+			<greater-than>
+				<property>rotors/main/rpm</property>
+				<value>175</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+  <!-- Animation for the static drop from the rotor blades --> 
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>rotorshaft</object-name>
+    <object-name>blade1</object-name>
+    <object-name>blade2</object-name>
+    <object-name>blade3</object-name>
+    <object-name>blade4</object-name>
+	<object-name>blade5</object-name>
+    <object-name>trim</object-name>
+    <object-name>blurred1</object-name>
+    <object-name>blurred2</object-name>
+    <object-name>blurred3</object-name>
+    <object-name>blurred4</object-name>
+	<object-name>blurred5</object-name>
+	<property>rotors/main/cone-deg</property>
+	   <interpolation>
+		<entry> <ind> 1 </ind>  <dep> 2</dep>  </entry>
+		<entry> <ind> 0 </ind>  <dep> 0</dep>  </entry>
+		<entry> <ind>-5 </ind>  <dep>-2</dep> </entry>
+	   </interpolation>
+	<!-- <factor>4.6</factor> --> 
+	<center>
+       <x-m> -0.14683 </x-m>
+       <y-m> 0.00074 </y-m>
+       <z-m> -0.00002 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>blade1</object-name>
+    <object-name>blade2</object-name>
+    <object-name>blade3</object-name>
+    <object-name>blade4</object-name>
+	<object-name>blade5</object-name>
+    <object-name>trim</object-name>
+    <property>rotors/main/cone-deg</property>
+	   <interpolation>
+		<entry> <ind> 1 </ind>  <dep> 2</dep>  </entry>
+		<entry> <ind> 0 </ind>  <dep> 0</dep>  </entry>
+		<entry> <ind>-5 </ind>  <dep>-2</dep> </entry>
+	   </interpolation>
+	<!-- <factor>3.2</factor> -->
+	<center>
+       <x-m> -0.9772 </x-m>
+       <y-m> 0.00583 </y-m>
+       <z-m> -0.01066 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>blade2</object-name>
+    <object-name>blade3</object-name>
+    <object-name>blade4</object-name>
+	<object-name>blade5</object-name>
+    <object-name>trim</object-name>
+    <property>rotors/main/cone-deg</property>
+	   <interpolation>
+		<entry> <ind> 1 </ind>  <dep> 2</dep>  </entry>
+		<entry> <ind> 0 </ind>  <dep> 0</dep>  </entry>
+		<entry> <ind>-5 </ind>  <dep>-2</dep> </entry>
+	   </interpolation>
+	<!-- <factor>1.6</factor> -->
+	<center>
+       <x-m> -1.43226 </x-m>
+       <y-m> 0.05283 </y-m>
+       <z-m> -0.01188 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>  
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>blade3</object-name>
+    <object-name>blade4</object-name>
+	<object-name>blade5</object-name>
+    <object-name>trim</object-name>
+    <property>rotors/main/cone-deg</property>
+	   <interpolation>
+		<entry> <ind> 1 </ind>  <dep> 2</dep>  </entry>
+		<entry> <ind> 0 </ind>  <dep> 0</dep>  </entry>
+		<entry> <ind>-5 </ind>  <dep>-2</dep> </entry>
+	   </interpolation>	
+	<!-- <factor>1.6</factor> -->
+	<center>
+       <x-m> -2.2631 </x-m>
+       <y-m> 0.04571 </y-m>
+       <z-m> -0.01411 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>blade4</object-name>
+	<object-name>blade5</object-name>
+    <object-name>trim</object-name>
+    <property>rotors/main/cone-deg</property>
+	   <interpolation>
+		<entry> <ind> 1 </ind>  <dep> 2</dep>  </entry>
+		<entry> <ind> 0 </ind>  <dep> 0</dep>  </entry>
+		<entry> <ind>-5 </ind>  <dep>-2</dep> </entry>
+	   </interpolation>
+	<!--  <factor>1.4</factor> -->
+	<center>
+       <x-m> -3.00764 </x-m>
+       <y-m> 0.03881 </y-m>
+       <z-m> -0.01872 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+	<object-name>blade5</object-name>
+    <object-name>trim</object-name>
+    <property>rotors/main/cone-deg</property>
+	   <interpolation>
+		<entry> <ind> 1 </ind>  <dep> 2</dep>  </entry>
+		<entry> <ind> 0 </ind>  <dep> 0</dep>  </entry>
+		<entry> <ind>-5 </ind>  <dep>-2</dep> </entry>
+	   </interpolation>
+	<!--  <factor>1.1</factor>  -->
+	<center>
+       <x-m> -3.93661 </x-m>
+       <y-m> 0.02987 </y-m>
+       <z-m> -0.02016 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>   
+
+
+
+  <!-- Collective input -->
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>rotorshaft</object-name>
+    <object-name>blade1</object-name>
+    <object-name>blade2</object-name>
+    <object-name>blade3</object-name>
+    <object-name>blade4</object-name>
+	<object-name>blade5</object-name>
+    <object-name>trim</object-name>
+    <property>rotors/main/blade[0]/incidence-deg</property>
+    <center>
+       <x-m> 0 </x-m>
+       <y-m> 0 </y-m>
+       <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+
+</PropertyList>
+
