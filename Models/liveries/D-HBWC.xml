@@ -7,6 +7,7 @@
     <livery>
       <name type="string">Polizei Baden-Wurttemberg (D-HBWC)</name>
       <texture>liveries/D-HBWC.png</texture>
+      <texture-rotor>MainRotor/mainrotor.png</texture-rotor>
     </livery>
     <md900>
       <searchlight_A800 type="bool">false</searchlight_A800>
