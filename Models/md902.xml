@@ -418,6 +418,7 @@
   <heading-deg> 0 </heading-deg>
  </offsets>			
 </model>
+<!--
 <model>
  <path>Aircraft/md900/Models/light/beacon.xml</path>
  <offsets>
@@ -462,6 +463,7 @@
   <heading-deg> 0 </heading-deg>
  </offsets>			
 </model>
+-->
 <model>
  <name>Landlight</name>
  <path>Aircraft/md900/Models/light/landlight.xml</path>
