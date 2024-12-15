@@ -41,7 +41,26 @@
  <property-base>sim/model/livery</property-base>
  <texture-prop>texture</texture-prop>
  <texture>UVmap.png</texture>
-</animation>
+</animation
+	
+ <animation>
+	 <type>material</type>
+    <object-name>rotorshaft</object-name>
+    <object-name>blade1</object-name>
+    <object-name>blade2</object-name>
+    <object-name>blade3</object-name>
+    <object-name>blade4</object-name>
+	 <object-name>blade5</object-name>
+    <object-name>trim</object-name>
+	<object-name>blurred1</object-name>
+    <object-name>blurred2</object-name>
+    <object-name>blurred3</object-name>
+    <object-name>blurred4</object-name>
+	<object-name>blurred5</object-name>
+	<property-base>sim/model/livery</property-base>
+    <texture-prop>texture-rotor</texture-prop>
+    <texture>mainrotor.png</texture>
+  </animation>
 
 <animation>
  <type>shader</type>
