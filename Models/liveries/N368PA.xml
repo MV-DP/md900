@@ -7,6 +7,7 @@
     <livery>
       <name type="string">National Park Service (N368PA)</name>
       <texture>liveries/N368PA.png</texture>
+      <texture-rotor>MainRotor/mainrotor-red.png</texture-rotor>
     </livery>
     <md900>
       <searchlight_A800 type="bool">false</searchlight_A800>
