@@ -7,6 +7,7 @@
     <livery>
       <name type="string">US Coast Guard (N9015P)</name>
       <texture>liveries/N9015P.png</texture>
+      <texture-rotor>MainRotor/mainrotor.png</texture-rotor>
     </livery>
     <md900>
       <searchlight_A800 type="bool">false</searchlight_A800>
