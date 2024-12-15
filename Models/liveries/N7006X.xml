@@ -7,6 +7,7 @@
     <livery>
       <name type="string">N7006X (KLPD colors)</name>
       <texture>liveries/N7006X.png</texture>
+      <texture-rotor>MainRotor/mainrotor-blue.png</texture-rotor>
     </livery>
     <md900>
       <searchlight_A800 type="bool">false</searchlight_A800>
