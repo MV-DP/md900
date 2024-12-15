@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
-
 <PropertyList>
-
   <path>md902.ac</path>
   
 <nasal>
@@ -10,12 +8,10 @@
 	    "Aircraft/md900/Models/liveries", 10,
 	    func { print("md900 livery update") });
         </load>
-
         <unload>
             livery_update.stop();
         </unload>
 </nasal>
-
 <animation>
  <type>material</type>
  <object-name>fuselage</object-name>
@@ -28,7 +24,6 @@
  <object-name>FrontDoor.L</object-name>
  <object-name>FrontDoor.R</object-name>
  <object-name>NOTAR</object-name>
- <object-name>NOTAR.001</object-name>
  <object-name>wirecutter-up.001</object-name>
  <object-name>wirecutter-up</object-name>
  <object-name>wirecutter-down</object-name>
@@ -44,7 +39,7 @@
  <texture>UVmap.png</texture>
 </animation>
 
-  <animation>
+ <animation>
 	<type>material</type>
     <object-name>rotorshaft</object-name>
     <object-name>blade1</object-name>
@@ -73,45 +68,31 @@
 <model>
 		<name>Interior</name>
 		<path>Aircraft/md900/Models/cockpit.xml</path>
-
 		<offsets>
-
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
 			<z-m>0.0</z-m>
-
 			<pitch-deg>0</pitch-deg>
-
 		</offsets>
 </model>
-
 <model>
 		<name>Cabin</name>
 		<path>Aircraft/md900/Models/Variants/cabin.xml</path>
-
 		<offsets>
-
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
 			<z-m>0.0</z-m>
-
 			<pitch-deg>0</pitch-deg>
-
 		</offsets>
 </model>
-
 <model>
 		<name>Interior</name>
 		<path>Aircraft/md900/Models/controlls.xml</path>
-
 		<offsets>
-
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
 			<z-m>0.0</z-m>
-
 			<pitch-deg>0</pitch-deg>
-
 		</offsets>
 </model>
  <animation>
@@ -127,7 +108,6 @@
    </binding>
   </action>
  </animation>
-
  <animation>
   <type>rotate</type>
   <object-name>FrontDoor.L</object-name>
@@ -158,7 +138,6 @@
     <z>-0.503452</z>
    </axis>
  </animation>
-
 <animation>
  <type>pick</type>
  <object-name>FrontDoor.R</object-name>
@@ -172,7 +151,6 @@
   </binding>
  </action>
 </animation>
-
 <animation>
  <type>rotate</type>
  <object-name>FrontDoor.R</object-name>
@@ -203,7 +181,6 @@
   <z>0.503452</z>
  </axis>
 </animation>
-
 <animation>
  <type>pick</type>
  <object-name>BackDoor.L</object-name>
@@ -217,7 +194,6 @@
   </binding>
  </action>
 </animation>
-
 <animation>
  <type>translate</type>
  <object-name>BackDoor.L</object-name>
@@ -248,7 +224,6 @@
   <z>0</z>
  </axis>
 </animation>
-
 <animation>
  <type>translate</type>
  <object-name>BackDoor.L</object-name>
@@ -275,7 +250,6 @@
   <z>0</z>
  </axis>
 </animation>
-
 <animation>
  <type>pick</type>
  <object-name>BackDoor.R</object-name>
@@ -289,7 +263,6 @@
   </binding>
  </action>
 </animation>
-
 <animation>
  <type>translate</type>
  <object-name>BackDoor.R</object-name>
@@ -320,7 +293,6 @@
   <z>0</z>
  </axis>
 </animation>
-
 <animation>
  <type>translate</type>
  <object-name>BackDoor.R</object-name>
@@ -347,7 +319,6 @@
   <z>0</z>
  </axis>
 </animation>
-
  <animation>
   <type>pick</type>
   <object-name>Reardoor</object-name>
@@ -361,7 +332,6 @@
    </binding>
   </action>
  </animation>
-
  <animation>
   <type>rotate</type>
   <object-name>Reardoor</object-name>
@@ -389,7 +359,6 @@
    <z2-m>-0.34036</z2-m>
   </axis>
  </animation>
-
 <animation>
  <type>rotate</type>
  <object-name>NOTAR</object-name>
@@ -405,7 +374,6 @@
   <z2-m>0.50690</z2-m>
  </axis>
 </animation>
-
 <model>
  <path>Aircraft/md900/Models/MainRotor/mainrotor.xml</path>
  <offsets>
@@ -429,7 +397,7 @@
  </offsets>			
 </model>
 <model>
- <path>Aircraft/md900/Models/light/New/green-navlight.xml</path>
+ <path>Aircraft/md900/Models/light/GreenLight.xml</path>
  <offsets>
   <x-m>5.0423</x-m>
   <y-m>1.4500</y-m>
@@ -440,7 +408,7 @@
  </offsets>			
 </model>
 <model>
- <path>Aircraft/md900/Models/light/New/red-navlight.xml</path>
+ <path>Aircraft/md900/Models/light/RedLight.xml</path>
  <offsets>
   <x-m>5.0423</x-m>
   <y-m>-1.4500</y-m>
@@ -451,7 +419,18 @@
  </offsets>			
 </model>
 <model>
- <path>Aircraft/md900/Models/light/New/beacon.xml</path>
+ <path>Aircraft/md900/Models/light/beacon.xml</path>
+ <offsets>
+  <x-m>5.0423</x-m>
+  <y-m>0.0000</y-m>
+  <z-m>0.9610</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> 0 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
+<model>
+ <path>Aircraft/md900/Models/light/beacon.xml</path>
  <offsets>
   <x-m>5.5211</x-m>
   <y-m>0.0000</y-m>
@@ -459,8 +438,30 @@
   <roll-deg> 0 </roll-deg>
   <pitch-deg> 0 </pitch-deg>
   <heading-deg> 0 </heading-deg>
- </offsets>	
-</model> 
+ </offsets>			
+</model>
+<model>
+ <path>Aircraft/md900/Models/light/WhiteLight.xml</path>
+ <offsets>
+  <x-m>5.1723</x-m>
+  <y-m>0.0000</y-m>
+  <z-m>0.9610</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> 0 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
+<model>
+ <path>Aircraft/md900/Models/light/WhiteLight.xml</path>
+ <offsets>
+  <x-m>5.6511</x-m>
+  <y-m>0.0000</y-m>
+  <z-m>0.1618</z-m>
+  <roll-deg> 0 </roll-deg>
+  <pitch-deg> 0 </pitch-deg>
+  <heading-deg> 0 </heading-deg>
+ </offsets>			
+</model>
 <model>
  <name>Landlight</name>
  <path>Aircraft/md900/Models/light/landlight.xml</path>
@@ -521,13 +522,11 @@
   <object-name>udder.R</object-name>
   <property>surface-positions/rudder-pos-norm</property>
   <factor>15.0</factor>
-
   <center>
    <x-m>4.9987</x-m>
    <y-m>1.4036</y-m>
    <z-m>1.0364</z-m>
   </center>
-
   <axis>
    <x>0.000000</x>
    <y>0.000000</y>
@@ -539,13 +538,11 @@
   <object-name>rudder.L</object-name>
   <property>surface-positions/rudder-pos-norm</property>
   <factor>15.0</factor>
-
   <center>
    <x-m>4.9987</x-m>
    <y-m>-1.4036</y-m>
    <z-m>1.0364</z-m>
   </center>
-
   <axis>
    <x>0.000000</x>
    <y>0.000000</y>
@@ -957,353 +954,26 @@
   <object-name>FDRglas</object-name>
   <object-name>NoseGlas</object-name>
  </effect>
-  <effect>
+ <effect>
   <inherits-from>Aircraft/md900/Models/Effects/reflect-uber</inherits-from>
- <object-name>fuselage</object-name>
- <object-name>fuselage.007</object-name>
- <object-name>Reardoor</object-name>
- <object-name>rudder.L</object-name>
- <object-name>udder.R</object-name>
- <object-name>BackDoor.L</object-name>
- <object-name>BackDoor.R</object-name>
- <object-name>FrontDoor.L</object-name>
- <object-name>FrontDoor.R</object-name>
- <object-name>NOTAR</object-name>
- <object-name>NOTAR.001</object-name>
- <object-name>wirecutter-up.001</object-name>
- <object-name>wirecutter-up</object-name>
- <object-name>wirecutter-down</object-name>
- <object-name>Radar-nose</object-name>
- <object-name>nose-mount</object-name>
- <object-name>longerskids</object-name>
- <object-name>winchfix</object-name>
- <object-name>winch</object-name>
- <object-name>AirIntake</object-name>
+  <object-name>fuselage</object-name>
+  <object-name>fuselage.007</object-name>
+  <object-name>Reardoor</object-name>
+  <object-name>rudder.L</object-name>
+  <object-name>udder.R</object-name>
+  <object-name>BackDoor.L</object-name>
+  <object-name>BackDoor.R</object-name>
+  <object-name>FrontDoor.L</object-name>
+  <object-name>FrontDoor.R</object-name>
+  <object-name>NOTAR</object-name>
+  <object-name>wirecutter-up.001</object-name>
+  <object-name>wirecutter-up</object-name>
+  <object-name>wirecutter-down</object-name>
+  <object-name>Radar-nose</object-name>
+  <object-name>nose-mount</object-name>
+  <object-name>longerskids</object-name>
+  <object-name>winchfix</object-name>
+  <object-name>winch</object-name>
+  <object-name>AirIntake</object-name>
  </effect>
-    <effect>
-       <inherits-from>Effects/model-transparent</inherits-from>
-        <object-name>NavLightRed</object-name>
-        <object-name>NavLightGreen</object-name>
-   </effect>
-   <!--NavLights-->
- <animation>
-        <type>flash</type>
-        <object-name>NavLightRed</object-name>
-		<center>
-			<x-m>5.02158</x-m>
-			<y-m>-1.49343</y-m>
-			<z-m>0.95149</z-m>
-		</center>
-		<axis>
-			<x>-1</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
-        <power>8</power>
-        <factor>3</factor>
-        <offset>0</offset>
-        <two-sides type="bool">false</two-sides>
-        <min>0.5</min>
-        <max>20</max>
-    </animation>
-    
-    
-<animation>
-	<type>select</type>
-        <object-name>NavLightRed</object-name>
-	<condition>
-	<and>
-	<or>
-	<not>
-	<property>/sim/rendering/shaders/skydome</property>
-	</not>
-	<not>
-	<property>/sim/model/md900/procedural-lights</property>
-	</not>
-	</or>
-	<property>/controls/lighting/nav-lights</property>
-	</and>
-	</condition>	
-</animation>
-
- <animation>
-        <type>flash</type>
-        <object-name>NavLightGreen</object-name>
-		<center>
-			<x-m>5.00972</x-m>
-			<y-m>1.512</y-m>
-			<z-m>0.94573</z-m>
-		</center>
-		<axis>
-			<x>-1</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-        <power>8</power>
-        <factor>3</factor>
-        <offset>0</offset>
-        <two-sides type="bool">false</two-sides>
-        <min>0.5</min>
-        <max>20</max>
-    </animation>
-    
-    
-<animation>
-	<type>select</type>
-        <object-name>NavLightGreen</object-name>
-	<condition>
-	<and>
-	<or>
-	<not>
-	<property>/sim/rendering/shaders/skydome</property>
-	</not>
-	<not>
-	<property>/sim/model/md900/procedural-lights</property>
-	</not>
-	</or>
-	<property>/controls/lighting/nav-lights</property>
-	</and>
-	</condition>	
-</animation>
-<!--Beacon-->
-
-  <animation>
-		<type>range</type>
-		<min-m>0</min-m>
-		<max-m>25000</max-m>
-	</animation>
-
-	<PlaneXparams>
-		<light-near>0.8</light-near>
-		<light-med>1.6</light-med>
-		<light-far>10</light-far>
-	</PlaneXparams>
-
-
-	<animation>
-		<type>alpha-test</type>
-		<object-name>PlaneX</object-name>
-		<alpha-factor>0.001</alpha-factor>
-	</animation>
-
-	<animation>
-		<type>translate</type>
-		<object-name>PlaneX</object-name>
-		<offset-m>6.499384</offset-m>
-		<axis>
-			<x>5.1266</x>
-			<y>0.0085</y>
-			<z>1.04</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>billboard</type>
-		<object-name>PlaneX</object-name>
-		<spherical type="bool">true</spherical>
-	</animation>
-
-	<animation>
-		<type>dist-scale</type>
-		<object-name>PlaneX</object-name>
-		<interpolation>
-			<entry>
-				<ind>0</ind>
-				<dep alias="../../../../PlaneXparams/light-near"/>
-			</entry>
-			<entry>
-				<ind>500</ind>
-				<dep alias="../../../../PlaneXparams/light-med"/>
-			</entry>
-			<entry>
-				<ind>16000</ind>
-				<dep alias="../../../../PlaneXparams/light-far"/>
-			</entry>
-		</interpolation>
-	</animation>
-	
-<!--<animation>
-	<type>select</type>
-        <object-name>PlaneX</object-name>
-	<condition>
-	<property>/systems/electrical/outputs/beacon</property>
-	</condition>
-</animation>-->
-
-<animation>
-   <type>blend</type>
-   <object-name>PlaneX</object-name>
-   <property>/controls/lighting/nav-lights</property>
-   <factor>1</factor>
-   <max>1.0</max>
-   <min>0.0</min>
- </animation>
-
-<animation>
-	<type>select</type>
-        <object-name>PlaneX</object-name>
-	<condition>
-	<and>
-	<or>
-	<not>
-	<property>/sim/rendering/shaders/skydome</property>
-	</not>
-	<not>
-	<property>/sim/model/md900/procedural-lights</property>
-	</not>
-	</or>
-	<greater-than>
-	<property>/controls/lighting/nav-lights</property>
-	<value>0.01</value>
-	</greater-than>
-	</and>
-	</condition>
-</animation>
-<!--left strobe-->
-	<animation>
-		<type>range</type>
-		<min-m>0</min-m>
-		<max-m>25000</max-m>
-	</animation>
-
-	<Plane.002Xparams>
-		<light-near>1.6</light-near>
-		<light-med>3.2</light-med>
-		<light-far>10</light-far>
-	</Plane.002Xparams>
-
-
-	<animation>
-		<type>alpha-test</type>
-		<object-name>Plane.002X</object-name>
-		<alpha-factor>0.001</alpha-factor>
-	</animation>
-
-	<animation>
-		<type>translate</type>
-		<object-name>Plane.002X</object-name>
-		<offset-m>5.609323</offset-m>
-		<axis>
-			<x>5.04039</x>
-			<y>-1.49038</y>
-			<z>0.95033</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>billboard</type>
-		<object-name>Plane.002X</object-name>
-		<spherical type="bool">true</spherical>
-	</animation>
-
-	<animation>
-		<type>dist-scale</type>
-		<object-name>Plane.002X</object-name>
-		<interpolation>
-			<entry>
-				<ind>0</ind>
-				<dep alias="../../../../Plane.002Xparams/light-near"/>
-			</entry>
-			<entry>
-				<ind>500</ind>
-				<dep alias="../../../../Plane.002Xparams/light-med"/>
-			</entry>
-			<entry>
-				<ind>16000</ind>
-				<dep alias="../../../../Plane.002Xparams/light-far"/>
-			</entry>
-		</interpolation>
-	</animation>
-	
-<animation>
-	<type>select</type>
-        <object-name>Plane.002X</object-name>
-	<condition>
-	<and>
-	<or>
-	<not>
-	<property>/sim/rendering/shaders/skydome</property>
-	</not>
-	<not>
-	<property>/sim/model/md900/procedural-lights</property>
-	</not>
-	</or>
-	<property>/systems/electrical/outputs/strobe</property>
-	</and>
-	</condition>
-</animation>
-	
-<!-- right strobe-->
-<animation>
-		<type>range</type>
-		<min-m>0</min-m>
-		<max-m>25000</max-m>
-	</animation>
-
-	<Plane.003Xparams>
-		<light-near>1.6</light-near>
-		<light-med>3.2</light-med>
-		<light-far>10</light-far>
-	</Plane.003Xparams>
-
-
-	<animation>
-		<type>alpha-test</type>
-		<object-name>Plane.003X</object-name>
-		<alpha-factor>0.001</alpha-factor>
-	</animation>
-
-	<animation>
-		<type>translate</type>
-		<object-name>Plane.003X</object-name>
-		<offset-m>5.612077</offset-m>
-		<axis>
-			<x>0.898882</x>
-			<y>5.467302</y>
-			<z>0.892203</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>billboard</type>
-		<object-name>Plane.003X</object-name>
-		<spherical type="bool">true</spherical>
-	</animation>
-
-	<animation>
-		<type>dist-scale</type>
-		<object-name>Plane.003X</object-name>
-		<interpolation>
-			<entry>
-				<ind>0</ind>
-				<dep alias="../../../../Plane.003Xparams/light-near"/>
-			</entry>
-			<entry>
-				<ind>500</ind>
-				<dep alias="../../../../Plane.003Xparams/light-med"/>
-			</entry>
-			<entry>
-				<ind>16000</ind>
-				<dep alias="../../../../Plane.003Xparams/light-far"/>
-			</entry>
-		</interpolation>
-	</animation>
-	
-<animation>
-	<type>select</type>
-        <object-name>Plane.003X</object-name>
-<condition>
-	<and>
-	<or>
-	<not>
-	<property>/sim/rendering/shaders/skydome</property>
-	</not>
-	<not>
-	<property>/sim/model/md900/procedural-lights</property>
-	</not>
-	</or>
-	<property>/systems/electrical/outputs/strobe</property>
-	</and>
-	</condition>
-</animation>
 </PropertyList>
