@@ -10,7 +10,7 @@
       <texture-rotor>MainRotor/mainrotor.png</texture-rotor>
     </livery>
     <md900>
-      <searchlight_A800 type="bool">false</searchlight_A800>
+      <searchlight_A800 type="bool">true</searchlight_A800>
       <searchlight_SX16_Nose type="bool">false</searchlight_SX16_Nose>
       <searchlight_SX16_Left type="bool">false</searchlight_SX16_Left>
       <searchlight_SX16_Back type="bool">false</searchlight_SX16_Back>
