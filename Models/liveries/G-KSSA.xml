@@ -36,7 +36,7 @@
       <FLIR_SAFIRE_Nose_Grey type="bool">false</FLIR_SAFIRE_Nose_Grey>
       <FLIR_SAFIRE_Nose type="bool">false</FLIR_SAFIRE_Nose>
       <!-- nose -->
-      <Radar-nose type="bool">true</Radar-nose>
+      <Radar-nose type="bool">false</Radar-nose>
       <nose-mount type="bool">false</nose-mount>
       <!-- skids -->
       <longerskids type="bool">false</longerskids>
